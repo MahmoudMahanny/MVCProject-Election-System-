@@ -185,3 +185,4 @@ D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\obj\Debug
 D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.dll
 D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.pdb
 D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.Migrations.testt.resources
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.Migrations.test21.resources
