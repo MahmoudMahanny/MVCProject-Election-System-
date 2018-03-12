@@ -8,7 +8,13 @@ namespace ElectionProgram.Models
 {
     public class DataContext:DbContext
     {
-        public DataContext():base("Data Source=.;Initial Catalog=Election;Integrated Security=True")
+        //Alaa
+        //public DataContext():base("Data Source=.;Initial Catalog=Election;Integrated Security=True")
+        //mahmoud
+        public DataContext():base(@"Data Source=DESKTOP-C3NTTGB\MAHMOUDMAHANNY;Initial Catalog=ElectionSystem;Integrated Security=True")
+            //Mohamed
+        //public DataContext() : base("Data Source=.;Initial Catalog=Election;Integrated Security=True")
+
         { }
 
         public virtual DbSet<Candidate> Candidate { get; set; }

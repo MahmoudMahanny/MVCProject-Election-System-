@@ -176,21 +176,25 @@
     <Compile Include="Migrations\201803101325373_electiUpdate.Designer.cs">
       <DependentUpon>201803101325373_electiUpdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803121630339_testt.cs" />
+    <Compile Include="Migrations\201803121630339_testt.Designer.cs">
+      <DependentUpon>201803121630339_testt.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\Model\Account.cs" />
-    <Compile Include="Models\Model\Admin.cs" />
-    <Compile Include="Models\Model\Answer.cs" />
-    <Compile Include="Models\Model\Candidate.cs" />
-    <Compile Include="Models\Model\CandidateVoter.cs" />
+    <Compile Include="Models\Model\Classes\Account.cs" />
+    <Compile Include="Models\Model\Classes\Admin.cs" />
+    <Compile Include="Models\Model\Classes\Answer.cs" />
+    <Compile Include="Models\Model\Classes\Candidate.cs" />
+    <Compile Include="Models\Model\Classes\CandidateVoter.cs" />
     <Compile Include="Models\Model\DataContext.cs" />
-    <Compile Include="Models\Model\Election.cs" />
-    <Compile Include="Models\Model\ElectionProgram.cs" />
-    <Compile Include="Models\Model\ElectionSymbols.cs" />
-    <Compile Include="Models\Model\Employee.cs" />
-    <Compile Include="Models\Model\Question.cs" />
-    <Compile Include="Models\Model\Questionaire.cs" />
-    <Compile Include="Models\Model\Voter.cs" />
-    <Compile Include="Models\Model\Winner.cs" />
+    <Compile Include="Models\Model\Classes\Election.cs" />
+    <Compile Include="Models\Model\Classes\ElectionProgram.cs" />
+    <Compile Include="Models\Model\Classes\ElectionSymbols.cs" />
+    <Compile Include="Models\Model\Classes\Employee.cs" />
+    <Compile Include="Models\Model\Classes\Question.cs" />
+    <Compile Include="Models\Model\Classes\Questionaire.cs" />
+    <Compile Include="Models\Model\Classes\Voter.cs" />
+    <Compile Include="Models\Model\Classes\Winner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -261,6 +265,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803101325373_electiUpdate.resx">
       <DependentUpon>201803101325373_electiUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803121630339_testt.resx">
+      <DependentUpon>201803121630339_testt.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
