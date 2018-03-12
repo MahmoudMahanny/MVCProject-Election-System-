@@ -26,7 +26,7 @@ namespace ElectionProgram.Models
         public virtual DbSet<Admin> Admin { get; set; }
         public virtual DbSet<CandidateVoter> CandidateVoter { get; set; }
         public virtual DbSet<Voter> Voter { get; set; }
-        public virtual DbSet<ElectionProgram> ElectionProgram { get; set; }
+        public virtual DbSet<ElectionPrograms> ElectionProgram { get; set; }
         public virtual DbSet<Election> Election { get; set; }
         public virtual DbSet<ElectionSymbols> electionSymbols { get; set; }
 

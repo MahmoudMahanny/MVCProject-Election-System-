@@ -45,11 +45,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -156,7 +156,15 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccountsController.cs" />
+    <Compile Include="Controllers\AdminsController.cs" />
+    <Compile Include="Controllers\CandidatesController.cs" />
+    <Compile Include="Controllers\ElectionProgramsController.cs" />
+    <Compile Include="Controllers\ElectionsController.cs" />
+    <Compile Include="Controllers\ElectionSymbolsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\QuestionairesController.cs" />
+    <Compile Include="Controllers\VotersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -180,6 +188,10 @@
     <Compile Include="Migrations\201803121630339_testt.Designer.cs">
       <DependentUpon>201803121630339_testt.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803121734512_test21.cs" />
+    <Compile Include="Migrations\201803121734512_test21.Designer.cs">
+      <DependentUpon>201803121734512_test21.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Model\Classes\Account.cs" />
     <Compile Include="Models\Model\Classes\Admin.cs" />
@@ -188,7 +200,7 @@
     <Compile Include="Models\Model\Classes\CandidateVoter.cs" />
     <Compile Include="Models\Model\DataContext.cs" />
     <Compile Include="Models\Model\Classes\Election.cs" />
-    <Compile Include="Models\Model\Classes\ElectionProgram.cs" />
+    <Compile Include="Models\Model\Classes\ElectionPrograms.cs" />
     <Compile Include="Models\Model\Classes\ElectionSymbols.cs" />
     <Compile Include="Models\Model\Classes\Employee.cs" />
     <Compile Include="Models\Model\Classes\Question.cs" />
@@ -241,6 +253,46 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_MyLayout.cshtml" />
+    <Content Include="Views\Accounts\Create.cshtml" />
+    <Content Include="Views\Accounts\Delete.cshtml" />
+    <Content Include="Views\Accounts\Details.cshtml" />
+    <Content Include="Views\Accounts\Edit.cshtml" />
+    <Content Include="Views\Accounts\Index.cshtml" />
+    <Content Include="Views\Admins\Create.cshtml" />
+    <Content Include="Views\Admins\Delete.cshtml" />
+    <Content Include="Views\Admins\Details.cshtml" />
+    <Content Include="Views\Admins\Edit.cshtml" />
+    <Content Include="Views\Admins\Index.cshtml" />
+    <Content Include="Views\Candidates\Create.cshtml" />
+    <Content Include="Views\Candidates\Delete.cshtml" />
+    <Content Include="Views\Candidates\Details.cshtml" />
+    <Content Include="Views\Candidates\Edit.cshtml" />
+    <Content Include="Views\Candidates\Index.cshtml" />
+    <Content Include="Views\Elections\Create.cshtml" />
+    <Content Include="Views\Elections\Delete.cshtml" />
+    <Content Include="Views\Elections\Details.cshtml" />
+    <Content Include="Views\Elections\Edit.cshtml" />
+    <Content Include="Views\Elections\Index.cshtml" />
+    <Content Include="Views\ElectionPrograms\Create.cshtml" />
+    <Content Include="Views\ElectionPrograms\Delete.cshtml" />
+    <Content Include="Views\ElectionPrograms\Details.cshtml" />
+    <Content Include="Views\ElectionPrograms\Edit.cshtml" />
+    <Content Include="Views\ElectionPrograms\Index.cshtml" />
+    <Content Include="Views\ElectionSymbols\Create.cshtml" />
+    <Content Include="Views\ElectionSymbols\Delete.cshtml" />
+    <Content Include="Views\ElectionSymbols\Details.cshtml" />
+    <Content Include="Views\ElectionSymbols\Edit.cshtml" />
+    <Content Include="Views\ElectionSymbols\Index.cshtml" />
+    <Content Include="Views\Questionaires\Create.cshtml" />
+    <Content Include="Views\Questionaires\Delete.cshtml" />
+    <Content Include="Views\Questionaires\Details.cshtml" />
+    <Content Include="Views\Questionaires\Edit.cshtml" />
+    <Content Include="Views\Questionaires\Index.cshtml" />
+    <Content Include="Views\Voters\Create.cshtml" />
+    <Content Include="Views\Voters\Delete.cshtml" />
+    <Content Include="Views\Voters\Details.cshtml" />
+    <Content Include="Views\Voters\Edit.cshtml" />
+    <Content Include="Views\Voters\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -268,6 +320,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803121630339_testt.resx">
       <DependentUpon>201803121630339_testt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803121734512_test21.resx">
+      <DependentUpon>201803121734512_test21.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

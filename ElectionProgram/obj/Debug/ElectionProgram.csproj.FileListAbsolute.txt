@@ -185,6 +185,7 @@ D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\obj\Debug
 D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.dll
 D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.pdb
 D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.Migrations.testt.resources
+<<<<<<< HEAD
 E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\ApplicationInsights.config
 E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\roslyn\csc.exe
 E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
@@ -248,3 +249,6 @@ E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgr
 E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.csproj.GenerateResource.Cache
 E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.dll
 E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.pdb
+=======
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.Migrations.test21.resources
+>>>>>>> 96d6e1310b2c3eabdb5f422bf4b275b707079b8b

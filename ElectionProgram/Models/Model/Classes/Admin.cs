@@ -7,7 +7,7 @@ namespace ElectionProgram.Models
 {
     public class Admin:Employee
     {
-        public int ID{ get; set; }
+        //public int ID{ get; set; }
 
         public Account Account { get; set; }
         public ICollection<Election> Election { get; set; }
