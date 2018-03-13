@@ -1,0 +1,17 @@
+﻿@model List<ElectionProgram.Models.Candidate>
+@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+@section header{
+    <div>mHome page</div>
+}
+@{ 
+    foreach (var item in Model)
+    {
+
+
+<div style="background-color:palegreen" >@item.Name </div>
+        }
+    }
+<h2>Home</h2>

@@ -12,7 +12,7 @@ namespace ElectionProgram.Models
         public string  Name{ get; set; }
         public DateTime BirthDate  { get; set; }
         public string  Gender { get; set; }
-        public long  NID { get; set; }
+        public long?  NID { get; set; }
         public string Address { get; set; }
         public int? Phone { get; set; }
         public string CareerPosition { get; set; }

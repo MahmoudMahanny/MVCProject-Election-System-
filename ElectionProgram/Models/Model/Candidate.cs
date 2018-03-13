@@ -7,7 +7,7 @@ namespace ElectionProgram.Models
 {
     public class Candidate:Employee
     {
-        public int ID { get; set; }
+        
         public int? NoOfVotes { get; set; }
        
 

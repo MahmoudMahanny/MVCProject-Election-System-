@@ -1,0 +1,15 @@
+﻿@model ElectionProgram.Models.Voter
+
+@{
+    ViewBag.Title = "My page";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+<h2>Create</h2>
+@section header{
+    <div>My page</div>
+}
+<div> @Model.Name</div>
+@Html.ActionLink("Home", "Home", new { id = Model.ID }) 
+
+
