@@ -4,15 +4,6 @@
     ViewBag.Title = "Create";
     Layout = "~/Views/Shared/_MyLayout.cshtml";
 }
-<<<<<<< HEAD
-
-<h2>Create</h2>
-@section header{
-    <div>voter page</div>
-}
-
-@using (Html.BeginForm("Create","Voters",FormMethod.Post, new { enctype = "multipart/form-data" }))
-=======
 @section header
     {
     <div> </div>
@@ -20,7 +11,6 @@
 <h2>Create</h2>
 
 @using (Html.BeginForm()) 
->>>>>>> 30c6e408bb89d6d87169c2b3e6b6ac2c6b5e1a0c
 {
     @Html.AntiForgeryToken()
     
@@ -91,20 +81,6 @@
                 @Html.ValidationMessageFor(model => model.PIC, "", new { @class = "text-danger" })
             </div>
         </div>
-<<<<<<< HEAD
-        <fieldset>
-            <legend>Image</legend>
-            <div class="editor-label">
-                @Html.LabelFor(model => model.ImagePath)
-            </div>
-            <div class="editor-field">
-                <input id="ImagePath" title="Upload a product image"
-                       type="file" name="file" />
-            </div>
-            
-        </fieldset>
-=======
->>>>>>> 30c6e408bb89d6d87169c2b3e6b6ac2c6b5e1a0c
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">

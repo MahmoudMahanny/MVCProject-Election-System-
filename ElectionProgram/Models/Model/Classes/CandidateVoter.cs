@@ -9,7 +9,6 @@ namespace ElectionProgram.Models
     {
         public int ID { get; set; }
 
-
         public virtual Candidate Candidate { get; set; }
         public virtual ICollection<Voter> Voters { get; set; }
     }

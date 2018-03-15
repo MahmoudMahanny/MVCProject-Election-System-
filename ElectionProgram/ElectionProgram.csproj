@@ -163,11 +163,7 @@
     <Compile Include="Controllers\ElectionsController.cs" />
     <Compile Include="Controllers\ElectionSymbolsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-<<<<<<< HEAD
-    <Compile Include="Controllers\tryController.cs" />
-=======
     <Compile Include="Controllers\QuestionairesController.cs" />
->>>>>>> 30c6e408bb89d6d87169c2b3e6b6ac2c6b5e1a0c
     <Compile Include="Controllers\VotersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -188,11 +184,6 @@
     <Compile Include="Migrations\201803101325373_electiUpdate.Designer.cs">
       <DependentUpon>201803101325373_electiUpdate.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-    <Compile Include="Migrations\201803121948509_test.cs" />
-    <Compile Include="Migrations\201803121948509_test.Designer.cs">
-      <DependentUpon>201803121948509_test.cs</DependentUpon>
-=======
     <Compile Include="Migrations\201803121630339_testt.cs" />
     <Compile Include="Migrations\201803121630339_testt.Designer.cs">
       <DependentUpon>201803121630339_testt.cs</DependentUpon>
@@ -200,7 +191,6 @@
     <Compile Include="Migrations\201803121734512_test21.cs" />
     <Compile Include="Migrations\201803121734512_test21.Designer.cs">
       <DependentUpon>201803121734512_test21.cs</DependentUpon>
->>>>>>> 30c6e408bb89d6d87169c2b3e6b6ac2c6b5e1a0c
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Model\Classes\Account.cs" />
@@ -218,7 +208,6 @@
     <Compile Include="Models\Model\Classes\Voter.cs" />
     <Compile Include="Models\Model\Classes\Winner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ShowModel\CandidatesIDVoter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -264,8 +253,6 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_MyLayout.cshtml" />
-<<<<<<< HEAD
-=======
     <Content Include="Views\Accounts\Create.cshtml" />
     <Content Include="Views\Accounts\Delete.cshtml" />
     <Content Include="Views\Accounts\Details.cshtml" />
@@ -301,23 +288,14 @@
     <Content Include="Views\Questionaires\Details.cshtml" />
     <Content Include="Views\Questionaires\Edit.cshtml" />
     <Content Include="Views\Questionaires\Index.cshtml" />
->>>>>>> 30c6e408bb89d6d87169c2b3e6b6ac2c6b5e1a0c
     <Content Include="Views\Voters\Create.cshtml" />
     <Content Include="Views\Voters\Delete.cshtml" />
     <Content Include="Views\Voters\Details.cshtml" />
     <Content Include="Views\Voters\Edit.cshtml" />
     <Content Include="Views\Voters\Index.cshtml" />
-<<<<<<< HEAD
-    <Content Include="Views\try\Index.cshtml" />
-    <Content Include="Views\Voters\Home.cshtml" />
-    <Content Include="Views\Voters\MYPage.cshtml" />
-    <Content Include="Views\Voters\Vote.cshtml" />
-=======
->>>>>>> 30c6e408bb89d6d87169c2b3e6b6ac2c6b5e1a0c
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Voter\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -340,16 +318,11 @@
     <EmbeddedResource Include="Migrations\201803101325373_electiUpdate.resx">
       <DependentUpon>201803101325373_electiUpdate.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
-    <EmbeddedResource Include="Migrations\201803121948509_test.resx">
-      <DependentUpon>201803121948509_test.cs</DependentUpon>
-=======
     <EmbeddedResource Include="Migrations\201803121630339_testt.resx">
       <DependentUpon>201803121630339_testt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803121734512_test21.resx">
       <DependentUpon>201803121734512_test21.cs</DependentUpon>
->>>>>>> 30c6e408bb89d6d87169c2b3e6b6ac2c6b5e1a0c
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
