@@ -7,6 +7,8 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using ElectionProgram.Models;
+using ElectionProgram.ShowModel;
+
 
 namespace ElectionProgram.Controllers
 {
@@ -29,10 +31,45 @@ namespace ElectionProgram.Controllers
         }
         public ActionResult Home(int id)
         {
-            List<Candidate> list = db.Candidate.ToList();
+            CandidatesIDVoter ca = new CandidatesIDVoter { VoterID = id, canList = db.Candidate.ToList() };
 
 
-            return View(list);
+
+            return View(ca);
+        }
+        [HttpGet]
+        public ActionResult Vote(int id)
+        {
+            CandidatesIDVoter ca = new CandidatesIDVoter { VoterID = id, canList = db.Candidate.ToList() };
+
+
+
+            return View(ca);
+        }
+       
+        public ActionResult change(int id,int vid)
+        {
+            Voter v = (from vo in db.Voter
+                       where vo.ID == vid
+                       select vo).FirstOrDefault();
+            if (v.IsVote == true)
+            {
+                return RedirectToAction("MYPage", new { id = vid });
+            }
+            else
+            {
+                var ca = (from c in db.Candidate
+                          where c.ID == id
+                          select c).FirstOrDefault();
+                ca.NoOfVotes += 1;
+                v.IsVote = true;
+
+                db.SaveChanges();
+
+
+
+                return RedirectToAction("MYPage", new { id = vid });
+            }
         }
 
         // GET: Voters/Details/5
@@ -61,11 +98,18 @@ namespace ElectionProgram.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Name,BirthDate,Gender,NID,Address,Phone,CareerPosition,PIC")] Voter voter)
+        public ActionResult Create([Bind(Include = "ID,Name,BirthDate,Gender,NID,Address,Phone,CareerPosition,PIC")] Voter voter, HttpPostedFileBase file)
         {
             if (ModelState.IsValid)
             {
-                db.Voter.Add(voter);
+            if (file != null)
+              {
+                    string path = HttpContext.Server.MapPath("/Content/images/");
+                file.SaveAs( path+file.FileName);
+                                                  
+                 voter.ImagePath  ="/Content/images/" +file.FileName;
+             }
+            db.Voter.Add(voter);
                 db.SaveChanges();
               return RedirectToAction("MYPage",new { id=voter.ID});
             }
@@ -123,7 +167,7 @@ namespace ElectionProgram.Controllers
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
-        {
+        { 
             Voter voter = db.Voter.Find(id);
             db.Voter.Remove(voter);
             db.SaveChanges();

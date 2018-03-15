@@ -17,7 +17,8 @@ namespace ElectionProgram.Models
         public int? Phone { get; set; }
         public string CareerPosition { get; set; }
         public byte[] PIC { get; set; }
-
+        //add
+        public string ImagePath { get; set; }
 
 
     }

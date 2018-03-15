@@ -1,17 +1,20 @@
-﻿@model List<ElectionProgram.Models.Candidate>
+﻿@model ElectionProgram.ShowModel.CandidatesIDVoter
 @{
     ViewBag.Title = "Home";
     Layout = "~/Views/Shared/_MyLayout.cshtml";
 }
 @section header{
-    <div>mHome page</div>
+    <div>show candidates</div>
 }
 @{ 
-    foreach (var item in Model)
+
+    foreach (var item in Model.canList)
     {
 
 
-<div style="background-color:palegreen" >@item.Name </div>
+     <div style="background-color:palegreen" >@item.Name </div>
         }
     }
-<h2>Home</h2>
+
+@Html.ActionLink("Goto MYPage", "MYPage", new { id =  Model.VoterID}) 
+

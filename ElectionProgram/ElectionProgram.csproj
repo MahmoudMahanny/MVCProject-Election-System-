@@ -198,6 +198,7 @@
     <Compile Include="Models\Model\Voter.cs" />
     <Compile Include="Models\Model\Winner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShowModel\CandidatesIDVoter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -251,6 +252,7 @@
     <Content Include="Views\try\Index.cshtml" />
     <Content Include="Views\Voters\Home.cshtml" />
     <Content Include="Views\Voters\MYPage.cshtml" />
+    <Content Include="Views\Voters\Vote.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -5,11 +5,33 @@
     Layout = "~/Views/Shared/_MyLayout.cshtml";
 }
 
-<h2>Create</h2>
+
 @section header{
-    <div>My page</div>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("show candidates", "Home", new { id = Model.ID })</li>
+                    <li>@Html.ActionLink("Vote", "Vote",new {  id = Model.ID })</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </ul>
+               
+                <span ><img src="@Model.ImagePath " width=50 height=50 /></span>
+                <span class="icon-bar" style="color:white"> @Model.Name </span>
+                          
+            </div>
+        </div>
+    </div>
 }
-<div> @Model.Name</div>
-@Html.ActionLink("Home", "Home", new { id = Model.ID }) 
+
+
 
 
