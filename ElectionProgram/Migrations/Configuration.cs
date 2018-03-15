@@ -9,7 +9,8 @@ namespace ElectionProgram.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationDataLossAllowed = true;
+            AutomaticMigrationsEnabled = true;
             ContextKey = "ElectionProgram.Models.DataContext";
         }
 

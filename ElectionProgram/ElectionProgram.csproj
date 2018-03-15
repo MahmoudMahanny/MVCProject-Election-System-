@@ -192,6 +192,10 @@
     <Compile Include="Migrations\201803121734512_test21.Designer.cs">
       <DependentUpon>201803121734512_test21.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803151501437_test.cs" />
+    <Compile Include="Migrations\201803151501437_test.Designer.cs">
+      <DependentUpon>201803151501437_test.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Model\Classes\Account.cs" />
     <Compile Include="Models\Model\Classes\Admin.cs" />
@@ -208,6 +212,7 @@
     <Compile Include="Models\Model\Classes\Voter.cs" />
     <Compile Include="Models\Model\Classes\Winner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShowModel\CandidatesIDVoter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -292,7 +297,10 @@
     <Content Include="Views\Voters\Delete.cshtml" />
     <Content Include="Views\Voters\Details.cshtml" />
     <Content Include="Views\Voters\Edit.cshtml" />
+    <Content Include="Views\Voters\ShowCandidate.cshtml" />
     <Content Include="Views\Voters\Index.cshtml" />
+    <Content Include="Views\Voters\MYPage.cshtml" />
+    <Content Include="Views\Voters\Vote.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -323,6 +331,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803121734512_test21.resx">
       <DependentUpon>201803121734512_test21.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803151501437_test.resx">
+      <DependentUpon>201803151501437_test.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -1,0 +1,21 @@
+﻿@model ElectionProgram.ShowModel.CandidatesIDVoter
+@{
+    ViewBag.Title = "ShowCandidate";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+@section header{
+    <div>show candidates</div>
+}
+@{ 
+
+    foreach (var item in Model.canList)
+    {
+
+
+     <div style="background-color:wheat" >@item.Name </div>
+        }
+    }
+<div class="btn btn-info">
+    @Html.ActionLink("Goto MYPage", "MYPage", new { id = Model.VoterID })
+</div>
+
