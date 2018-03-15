@@ -1,20 +1,13 @@
-﻿@model ElectionProgram.Models.Voter
+﻿@model ElectionProgram.Models.Admin
 
 @{
     ViewBag.Title = "Edit";
     Layout = "~/Views/Shared/_MyLayout.cshtml";
 }
-<<<<<<< HEAD
-@section header{
-    <div>mohamed sayed</div>
-}
-=======
 @section header
-    {
-    <div> </div>
+{
+    <div>xfdfd</div>
 }
-
->>>>>>> 30c6e408bb89d6d87169c2b3e6b6ac2c6b5e1a0c
 <h2>Edit</h2>
 
 @using (Html.BeginForm())
@@ -22,7 +15,7 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Voter</h4>
+        <h4>Admin</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.ID)

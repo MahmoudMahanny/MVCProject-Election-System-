@@ -1,31 +1,32 @@
-﻿@model ElectionProgram.Models.Voter
+﻿@model ElectionProgram.Models.Candidate
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Create";
     Layout = "~/Views/Shared/_MyLayout.cshtml";
 }
-<<<<<<< HEAD
-@section header{
-    <div>mohamed sayed</div>
-}
-=======
 @section header
-    {
-    <div> </div>
+{
+    <div>
+
+    </div>
 }
+<h2>Create</h2>
 
->>>>>>> 30c6e408bb89d6d87169c2b3e6b6ac2c6b5e1a0c
-<h2>Edit</h2>
-
-@using (Html.BeginForm())
+@using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Voter</h4>
+        <h4>Candidate</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.ID)
+        <div class="form-group">
+            @Html.LabelFor(model => model.NoOfVotes, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NoOfVotes, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.NoOfVotes, "", new { @class = "text-danger" })
+            </div>
+        </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -93,7 +94,7 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="Create" class="btn btn-default" />
             </div>
         </div>
     </div>

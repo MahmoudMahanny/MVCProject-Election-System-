@@ -7,8 +7,11 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using ElectionProgram.Models;
+<<<<<<< HEAD
 using ElectionProgram.ShowModel;
 
+=======
+>>>>>>> 30c6e408bb89d6d87169c2b3e6b6ac2c6b5e1a0c
 
 namespace ElectionProgram.Controllers
 {
@@ -21,6 +24,7 @@ namespace ElectionProgram.Controllers
         {
             return View(db.Voter.ToList());
         }
+<<<<<<< HEAD
         [HttpGet]
         public ActionResult MYPage(int id)
         {
@@ -71,6 +75,8 @@ namespace ElectionProgram.Controllers
                 return RedirectToAction("MYPage", new { id = vid });
             }
         }
+=======
+>>>>>>> 30c6e408bb89d6d87169c2b3e6b6ac2c6b5e1a0c
 
         // GET: Voters/Details/5
         public ActionResult Details(int? id)
@@ -98,6 +104,7 @@ namespace ElectionProgram.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+<<<<<<< HEAD
         public ActionResult Create([Bind(Include = "ID,Name,BirthDate,Gender,NID,Address,Phone,CareerPosition,PIC")] Voter voter, HttpPostedFileBase file)
         {
             if (ModelState.IsValid)
@@ -112,6 +119,15 @@ namespace ElectionProgram.Controllers
             db.Voter.Add(voter);
                 db.SaveChanges();
               return RedirectToAction("MYPage",new { id=voter.ID});
+=======
+        public ActionResult Create([Bind(Include = "ID,Name,BirthDate,Gender,NID,Address,Phone,CareerPosition,PIC")] Voter voter)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Voter.Add(voter);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+>>>>>>> 30c6e408bb89d6d87169c2b3e6b6ac2c6b5e1a0c
             }
 
             return View(voter);
@@ -147,7 +163,11 @@ namespace ElectionProgram.Controllers
             }
             return View(voter);
         }
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> 30c6e408bb89d6d87169c2b3e6b6ac2c6b5e1a0c
         // GET: Voters/Delete/5
         public ActionResult Delete(int? id)
         {
@@ -167,7 +187,11 @@ namespace ElectionProgram.Controllers
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
+<<<<<<< HEAD
         { 
+=======
+        {
+>>>>>>> 30c6e408bb89d6d87169c2b3e6b6ac2c6b5e1a0c
             Voter voter = db.Voter.Find(id);
             db.Voter.Remove(voter);
             db.SaveChanges();

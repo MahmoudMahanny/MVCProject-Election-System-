@@ -5,7 +5,7 @@ using System.Web;
 
 namespace ElectionProgram.Models
 {
-    public class ElectionProgram
+    public class ElectionPrograms
     {
         public int ID{ get; set; }
         public string Name { get; set; }

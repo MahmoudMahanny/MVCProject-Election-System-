@@ -1,22 +1,17 @@
-﻿@model ElectionProgram.Models.Voter
+﻿@model ElectionProgram.Models.Admin
 
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = "Details";
     Layout = "~/Views/Shared/_MyLayout.cshtml";
 }
-
-<<<<<<< HEAD
-=======
 @section header
-    {
-    <div> </div>
+{
+    <div>xfdfd</div>
 }
->>>>>>> 30c6e408bb89d6d87169c2b3e6b6ac2c6b5e1a0c
-<h2>Delete</h2>
+<h2>Details</h2>
 
-<h3>Are you sure you want to delete this?</h3>
 <div>
-    <h4>Voter</h4>
+    <h4>Admin</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -84,13 +79,8 @@
         </dd>
 
     </dl>
-
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
-
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
-        </div>
-    }
 </div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

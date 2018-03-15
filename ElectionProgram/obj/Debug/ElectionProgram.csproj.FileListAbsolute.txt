@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 D:\mvc Project gethub\MVCProject-Election-System-\ElectionProgram\bin\ApplicationInsights.config
 D:\mvc Project gethub\MVCProject-Election-System-\ElectionProgram\bin\roslyn\csc.exe
 D:\mvc Project gethub\MVCProject-Election-System-\ElectionProgram\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
@@ -61,3 +62,259 @@ D:\mvc Project gethub\MVCProject-Election-System-\ElectionProgram\obj\Debug\Elec
 D:\mvc Project gethub\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.csproj.GenerateResource.Cache
 D:\mvc Project gethub\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.dll
 D:\mvc Project gethub\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.pdb
+=======
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\ApplicationInsights.config
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\roslyn\csc.exe
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\roslyn\System.Collections.Immutable.dll
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\roslyn\System.Reflection.Metadata.dll
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\roslyn\vbc.exe
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\roslyn\VBCSCompiler.exe
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\roslyn\VBCSCompiler.exe.config
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\ElectionProgram.dll.config
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\ElectionProgram.dll
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\ElectionProgram.pdb
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\Antlr3.Runtime.dll
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\EntityFramework.dll
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\EntityFramework.SqlServer.dll
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\Microsoft.AI.Agent.Intercept.dll
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\Microsoft.AI.DependencyCollector.dll
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\Microsoft.AI.Web.dll
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\Microsoft.AI.WindowsServer.dll
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\Microsoft.ApplicationInsights.dll
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\Microsoft.Web.Infrastructure.dll
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\Newtonsoft.Json.dll
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\System.Web.Helpers.dll
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\System.Web.Mvc.dll
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\System.Web.Optimization.dll
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\System.Web.Razor.dll
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\System.Web.WebPages.Deployment.dll
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\System.Web.WebPages.dll
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\System.Web.WebPages.Razor.dll
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\WebGrease.dll
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\EntityFramework.xml
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\EntityFramework.SqlServer.xml
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\Microsoft.AI.DependencyCollector.xml
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\Microsoft.AI.Web.xml
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\Microsoft.AI.WindowsServer.xml
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\Microsoft.ApplicationInsights.xml
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\System.Web.Helpers.xml
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\System.Web.Mvc.xml
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\System.Web.Optimization.xml
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\System.Web.Razor.xml
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\System.Web.WebPages.xml
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\System.Web.WebPages.Deployment.xml
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\System.Web.WebPages.Razor.xml
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\Antlr3.Runtime.pdb
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\bin\Newtonsoft.Json.xml
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\obj\Debug\ElectionProgram.csprojResolveAssemblyReference.cache
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\obj\Debug\ElectionProgram.dll
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\obj\Debug\ElectionProgram.pdb
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\obj\Debug\ElectionProgram.Migrations.InitialCreate.resources
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\obj\Debug\ElectionProgram.csproj.GenerateResource.Cache
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\obj\Debug\ElectionProgram.Migrations.electionFirstUpdate.resources
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\obj\Debug\ElectionProgram.Migrations.electionSecondUpdate.resources
+E:\ITI\subjects\MVC\project\ElectionProgram\ElectionProgram\obj\Debug\ElectionProgram.Migrations.electiUpdate.resources
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\ApplicationInsights.config
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\roslyn\csc.exe
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\roslyn\System.Collections.Immutable.dll
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\roslyn\System.Reflection.Metadata.dll
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\roslyn\vbc.exe
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\roslyn\VBCSCompiler.exe
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\roslyn\VBCSCompiler.exe.config
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\ElectionProgram.dll.config
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\ElectionProgram.dll
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\ElectionProgram.pdb
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\Antlr3.Runtime.dll
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\EntityFramework.dll
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\EntityFramework.SqlServer.dll
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\Microsoft.AI.Agent.Intercept.dll
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\Microsoft.AI.DependencyCollector.dll
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\Microsoft.AI.Web.dll
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\Microsoft.AI.WindowsServer.dll
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\Microsoft.ApplicationInsights.dll
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\Microsoft.Web.Infrastructure.dll
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\Newtonsoft.Json.dll
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\System.Web.Helpers.dll
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\System.Web.Mvc.dll
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\System.Web.Optimization.dll
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\System.Web.Razor.dll
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\System.Web.WebPages.Deployment.dll
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\System.Web.WebPages.dll
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\System.Web.WebPages.Razor.dll
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\WebGrease.dll
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\EntityFramework.xml
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\EntityFramework.SqlServer.xml
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\Microsoft.AI.DependencyCollector.xml
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\Microsoft.AI.Web.xml
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\Microsoft.AI.WindowsServer.xml
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\Microsoft.ApplicationInsights.xml
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\System.Web.Helpers.xml
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\System.Web.Mvc.xml
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\System.Web.Optimization.xml
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\System.Web.Razor.xml
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\System.Web.WebPages.xml
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\System.Web.WebPages.Deployment.xml
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\System.Web.WebPages.Razor.xml
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\Antlr3.Runtime.pdb
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\bin\Newtonsoft.Json.xml
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\obj\Debug\ElectionProgram.csprojResolveAssemblyReference.cache
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\obj\Debug\ElectionProgram.Migrations.InitialCreate.resources
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\obj\Debug\ElectionProgram.Migrations.electionFirstUpdate.resources
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\obj\Debug\ElectionProgram.Migrations.electionSecondUpdate.resources
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\obj\Debug\ElectionProgram.Migrations.electiUpdate.resources
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\obj\Debug\ElectionProgram.csproj.GenerateResource.Cache
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\obj\Debug\ElectionProgram.dll
+E:\ITI\subjects\MVC\New folder\ElectionProgram\ElectionProgram\obj\Debug\ElectionProgram.pdb
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\ApplicationInsights.config
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\roslyn\csc.exe
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\roslyn\System.Collections.Immutable.dll
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\roslyn\System.Reflection.Metadata.dll
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\roslyn\vbc.exe
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\roslyn\VBCSCompiler.exe
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\roslyn\VBCSCompiler.exe.config
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\ElectionProgram.dll.config
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\ElectionProgram.dll
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\ElectionProgram.pdb
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\Antlr3.Runtime.dll
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\EntityFramework.dll
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\EntityFramework.SqlServer.dll
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.AI.Agent.Intercept.dll
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.AI.DependencyCollector.dll
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.AI.Web.dll
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.AI.WindowsServer.dll
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.ApplicationInsights.dll
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.Web.Infrastructure.dll
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\Newtonsoft.Json.dll
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\System.Web.Helpers.dll
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\System.Web.Mvc.dll
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\System.Web.Optimization.dll
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\System.Web.Razor.dll
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\System.Web.WebPages.Deployment.dll
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\System.Web.WebPages.dll
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\System.Web.WebPages.Razor.dll
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\WebGrease.dll
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\EntityFramework.xml
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\EntityFramework.SqlServer.xml
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.AI.DependencyCollector.xml
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.AI.Web.xml
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.AI.WindowsServer.xml
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.ApplicationInsights.xml
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\System.Web.Helpers.xml
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\System.Web.Mvc.xml
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\System.Web.Optimization.xml
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\System.Web.Razor.xml
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\System.Web.WebPages.xml
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\System.Web.WebPages.Deployment.xml
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\System.Web.WebPages.Razor.xml
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\Antlr3.Runtime.pdb
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\Newtonsoft.Json.xml
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.csprojResolveAssemblyReference.cache
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.Migrations.InitialCreate.resources
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.Migrations.electionFirstUpdate.resources
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.Migrations.electionSecondUpdate.resources
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.Migrations.electiUpdate.resources
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.csproj.GenerateResource.Cache
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.dll
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.pdb
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.Migrations.testt.resources
+<<<<<<< HEAD
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\ApplicationInsights.config
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\roslyn\csc.exe
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\roslyn\System.Collections.Immutable.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\roslyn\System.Reflection.Metadata.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\roslyn\vbc.exe
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\roslyn\VBCSCompiler.exe
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\roslyn\VBCSCompiler.exe.config
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\ElectionProgram.dll.config
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\ElectionProgram.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\ElectionProgram.pdb
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Antlr3.Runtime.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\EntityFramework.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\EntityFramework.SqlServer.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.AI.Agent.Intercept.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.AI.DependencyCollector.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.AI.Web.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.AI.WindowsServer.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.ApplicationInsights.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.Web.Infrastructure.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Newtonsoft.Json.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\System.Web.Helpers.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\System.Web.Mvc.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\System.Web.Optimization.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\System.Web.Razor.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\System.Web.WebPages.Deployment.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\System.Web.WebPages.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\System.Web.WebPages.Razor.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\WebGrease.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\EntityFramework.xml
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\EntityFramework.SqlServer.xml
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.AI.DependencyCollector.xml
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.AI.Web.xml
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.AI.WindowsServer.xml
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.ApplicationInsights.xml
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\System.Web.Helpers.xml
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\System.Web.Mvc.xml
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\System.Web.Optimization.xml
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\System.Web.Razor.xml
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\System.Web.WebPages.xml
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\System.Web.WebPages.Deployment.xml
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\System.Web.WebPages.Razor.xml
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Antlr3.Runtime.pdb
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Newtonsoft.Json.xml
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.csprojResolveAssemblyReference.cache
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.Migrations.InitialCreate.resources
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.Migrations.electionFirstUpdate.resources
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.Migrations.electionSecondUpdate.resources
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.Migrations.electiUpdate.resources
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.Migrations.testt.resources
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.csproj.GenerateResource.Cache
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.pdb
+=======
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.Migrations.test21.resources
+>>>>>>> 96d6e1310b2c3eabdb5f422bf4b275b707079b8b
+>>>>>>> 30c6e408bb89d6d87169c2b3e6b6ac2c6b5e1a0c
