@@ -40,11 +40,23 @@ namespace ElectionProgram.Controllers
         [HttpGet]
         public ActionResult Vote(int id)
         {
-            CandidatesIDVoter ca = new CandidatesIDVoter { VoterID = id, canList = db.Candidate.ToList() };
+
+            Voter v = (from vo in db.Voter
+                       where vo.ID == id
+                       select vo).FirstOrDefault();
+            if (v.IsVote == true)
+            {
+                return RedirectToAction("MYPage", new { ID = id });
+            }
+            else
+            {
+
+                CandidatesIDVoter ca = new CandidatesIDVoter { VoterID = id, canList = db.Candidate.ToList() };
 
 
 
-            return View(ca);
+                return View(ca);
+            }
         }
        
         public ActionResult change(int id,int vid)

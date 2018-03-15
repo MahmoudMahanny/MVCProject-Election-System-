@@ -314,3 +314,4 @@ D:\mvc Project gethub\MVCProject-Election-System-\MVCProject-Election-System-\El
 D:\mvc Project gethub\MVCProject-Election-System-\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.dll
 D:\mvc Project gethub\MVCProject-Election-System-\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.pdb
 D:\mvc Project gethub\MVCProject-Election-System-\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.Migrations.test.resources
+D:\mvc Project gethub\MVCProject-Election-System-\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.csprojResolveAssemblyReference.cache
