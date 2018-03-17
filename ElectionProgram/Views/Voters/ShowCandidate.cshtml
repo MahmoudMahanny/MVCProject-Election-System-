@@ -7,7 +7,11 @@
     <div>show candidates</div>
 }
 <link href="~/Content/ShowcandidateStyle.css" rel="stylesheet" />
+<<<<<<< HEAD
 <table id="mytable">
+=======
+<table id="header-fixed">
+>>>>>>> 220797f3fcab6a85c4958c31b51d30c86ffa1e13
     <tr class="Header" id="myHeader">
         <th>Candidate Name</th>
         <th>Number of Votes</th>
@@ -40,3 +44,23 @@
         </div>
             
   
+<<<<<<< HEAD
+=======
+
+    <script>
+        var tableOffset = $("#table-1").offset().top;
+        var $header = $("#table-1 > thead").clone();
+        var $fixedHeader = $("#header-fixed").append($header);
+
+        $(window).bind("scroll", function () {
+            var offset = $(this).scrollTop();
+
+            if (offset >= tableOffset && $fixedHeader.is(":hidden")) {
+                $fixedHeader.show();
+            }
+            else if (offset < tableOffset) {
+                $fixedHeader.hide();
+            }
+        });
+</script>
+>>>>>>> 220797f3fcab6a85c4958c31b51d30c86ffa1e13

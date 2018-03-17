@@ -2,7 +2,11 @@
 }
 
    
+<<<<<<< HEAD
     .mytable {
+=======
+    #header-fixed {
+>>>>>>> 220797f3fcab6a85c4958c31b51d30c86ffa1e13
     position: fixed;
     top: 0px; display:none;
     background-color:white;
@@ -19,7 +23,15 @@ th, td {
     padding: 8px;
     overflow:auto;
 }
+<<<<<<< HEAD
 
+=======
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+>>>>>>> 220797f3fcab6a85c4958c31b51d30c86ffa1e13
 
 tr:nth-child(even){background-color: #f2f2f2}
 
