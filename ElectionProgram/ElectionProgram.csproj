@@ -219,6 +219,8 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\images\1.png" />
     <Content Include="Content\LoginStyle.css" />
+    <Content Include="Content\messagevoted.css" />
+    <Content Include="Content\ShowcandidateStyle.css" />
     <Content Include="Content\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -301,6 +303,7 @@
     <Content Include="Views\Voters\Index.cshtml" />
     <Content Include="Views\Voters\MYPage.cshtml" />
     <Content Include="Views\Voters\Vote.cshtml" />
+    <Content Include="Views\Voters\IsVoteMessag.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

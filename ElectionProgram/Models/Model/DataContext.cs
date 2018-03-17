@@ -11,14 +11,14 @@ namespace ElectionProgram.Models
         //Alaa
         //public DataContext():base("Data Source=.;Initial Catalog=Election;Integrated Security=True")
         //mahmoud
-        //public DataContext():base(@"Data Source=DESKTOP-C3NTTGB\M_MAHANNY;Initial Catalog=ElectionSystem;Integrated Security=True")
+        public DataContext():base(@"Data Source=DESKTOP-C3NTTGB\M_MAHANNY;Initial Catalog=ElectionSystem;Integrated Security=True")
             //Mohamed
-        public DataContext() : base("Data Source=MOHAMEDSAYED-PC;Initial Catalog=ElectionSystem;Integrated Security=True")
+       // public DataContext() : base("Data Source=MOHAMEDSAYED-PC;Initial Catalog=ElectionSystem;Integrated Security=True")
 
         { }
 
         public virtual DbSet<Candidate> Candidate { get; set; }
-        public virtual DbSet<Winner> Winners { get; set; }
+        public virtual DbSet<Winner> Winner { get; set; }
         public virtual DbSet<Questionaire> Questionaire { get; set; }
         public virtual DbSet<Question> Question { get; set; }
         public virtual DbSet<Answer> Answer { get; set; }
