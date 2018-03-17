@@ -6,16 +6,54 @@
 @section header{
     <div>show candidates</div>
 }
-@{ 
+<link href="~/Content/ShowcandidateStyle.css" rel="stylesheet" />
+<table id="header-fixed">
+    <tr class="Header" id="myHeader">
+        <th>Candidate Name</th>
+        <th>Number of Votes</th>
+        <th>Candidate Image</th>
+        </tr>
+    
+        @{
+            foreach (var item in Model.canList)
+            {
+                <tr>
 
-    foreach (var item in Model.canList)
-    {
+                    <td>@item.Name </td>
+                    <td>@item.NoOfVotes </td>
+                    <td><img src="@item.ImagePath" width="50px" height="50px"/> </td>
+                    }
+
+                </tr>
+
+                }
+            }
 
 
-     <div style="background-color:wheat" >@item.Name </div>
-        }
-    }
-<div class="btn btn-info">
-    @Html.ActionLink("Goto MYPage", "MYPage", new { id = Model.VoterID })
-</div>
 
+    </table>
+    
+       
+           
+        <div class="btn btn-info" style="text-align:center;color:white">
+            @Html.ActionLink("Goto MYPage", "MYPage", new { id = Model.VoterID })
+        </div>
+            
+  
+
+    <script>
+        var tableOffset = $("#table-1").offset().top;
+        var $header = $("#table-1 > thead").clone();
+        var $fixedHeader = $("#header-fixed").append($header);
+
+        $(window).bind("scroll", function () {
+            var offset = $(this).scrollTop();
+
+            if (offset >= tableOffset && $fixedHeader.is(":hidden")) {
+                $fixedHeader.show();
+            }
+            else if (offset < tableOffset) {
+                $fixedHeader.hide();
+            }
+        });
+</script>

@@ -1,0 +1,18 @@
+﻿@model ElectionProgram.Models.Voter 
+@{
+    ViewBag.Title = "IsVoteMessag";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+@section header{
+   <h1>instraction</h1> 
+    }
+<div id="mes" >
+    <p>you Voted before</p>
+    <span><img src="@Model.ImagePath " width=50 height=50 /></span>
+    <span class="icon-bar" style="color:white"> @Model.Name </span>
+</div>
+
+<div class="btn btn-success" style="margin:0.5px">
+    @Html.ActionLink("Goto MYPage", "MYPage", new { id = Model.ID })
+</div>
+

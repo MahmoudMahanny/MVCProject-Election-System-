@@ -1,0 +1,37 @@
+﻿body {
+}
+
+   
+    #header-fixed {
+    position: fixed;
+    top: 0px; display:none;
+    background-color:white;
+     border-collapse: collapse;
+    width: 100%;
+    margin:50px;
+    padding: 8px;
+}
+    
+
+
+th, td {
+    text-align: left;
+    padding: 8px;
+    overflow:auto;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: red;
+    color: white;
+}
+a.highlight:hover {
+    color: #ff0000;
+} 
+

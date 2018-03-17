@@ -21,7 +21,7 @@ namespace ElectionProgram.Controllers
         {
             return View(db.Voter.ToList());
         }
-
+        [HttpGet]
         public ActionResult MYPage(int id)
         {
             Voter v = (from vo in db.Voter
@@ -29,6 +29,7 @@ namespace ElectionProgram.Controllers
                        select vo).FirstOrDefault();
             return View(v);
         }
+        [HttpGet]
         public ActionResult ShowCandidate(int id)
         {
             CandidatesIDVoter ca = new CandidatesIDVoter { VoterID = id, canList = db.Candidate.ToList() };
@@ -36,6 +37,28 @@ namespace ElectionProgram.Controllers
 
 
             return View(ca);
+        }
+       
+             public ActionResult Aplay(int id)
+        {
+
+            Voter v = (from vo in db.Voter
+                       where vo.ID == id
+                       select vo).FirstOrDefault();
+            db.Voter.Remove(v);
+            Candidate c = new Candidate { Name = v.Name, NID = v.NID, BirthDate = v.BirthDate ,ImagePath=v.ImagePath };
+            db.Candidate.Add(c);
+            db.SaveChanges();
+            return RedirectToAction("Details", "Candidates", new { ID = c.ID });
+           
+        }
+        public ActionResult IsVoteMessag(int id)
+        {
+
+            Voter v = (from vo in db.Voter
+                       where vo.ID == id
+                       select vo).FirstOrDefault();
+            return View(v);
         }
         [HttpGet]
         public ActionResult Vote(int id)
@@ -46,7 +69,7 @@ namespace ElectionProgram.Controllers
                        select vo).FirstOrDefault();
             if (v.IsVote == true)
             {
-                return RedirectToAction("MYPage", new { ID = id });
+                return RedirectToAction("IsVoteMessag", new { ID = id });
             }
             else
             {
@@ -58,15 +81,17 @@ namespace ElectionProgram.Controllers
                 return View(ca);
             }
         }
-       
-        public ActionResult change(int id,int vid)
+        [HttpPost]
+        public ActionResult change(int id,int VoterID)
         {
+            
             Voter v = (from vo in db.Voter
-                       where vo.ID == vid
+                       where vo.ID == VoterID
                        select vo).FirstOrDefault();
             if (v.IsVote == true)
             {
-                return RedirectToAction("MYPage", new { id = vid });
+                return RedirectToAction("MYPage", new { id = VoterID });
+                
             }
             else
             {
@@ -80,7 +105,7 @@ namespace ElectionProgram.Controllers
 
 
 
-                return RedirectToAction("MYPage", new { id = vid });
+                return RedirectToAction("MYPage", new { id = VoterID });
             }
         }
 
@@ -118,10 +143,10 @@ namespace ElectionProgram.Controllers
             {
                 if (file != null)
                 {
-                    string path = HttpContext.Server.MapPath("/Content/images/");
+                    string path = HttpContext.Server.MapPath("~/Content/images/");
                     file.SaveAs(path + file.FileName);
 
-                    voter.ImagePath = "/Content/images/" + file.FileName;
+                    voter.ImagePath ="/Content/images/"+ file.FileName;
                 }
             }
             db.Voter.Add(voter);

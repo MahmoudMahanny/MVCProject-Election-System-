@@ -19,8 +19,9 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("show candidates", "ShowCandidate", new { id = Model.ID })</li>
+                    <li>@Html.ActionLink("show candidates","ShowCandidate", new { id = Model.ID })</li>
                     <li>@Html.ActionLink("Vote", "Vote",new {  id = Model.ID })</li>
+                    <li>@Html.ActionLink("Aplay As Candidate", "Aplay", new { id = Model.ID })
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>
                
@@ -31,6 +32,12 @@
         </div>
     </div>
 }
+
+           
+
+
+
+
 
 
 
