@@ -445,3 +445,4 @@ D:\ITI\MVC\Election System - Copy\MVCProject-Election-System-Mohamed 03_21PM\Ele
 D:\ITI\MVC\Election System - Copy\MVCProject-Election-System-Mohamed 03_21PM\ElectionProgram\obj\Debug\ElectionProgram.csproj.GenerateResource.Cache
 D:\ITI\MVC\Election System - Copy\MVCProject-Election-System-Mohamed 03_21PM\ElectionProgram\obj\Debug\ElectionProgram.dll
 D:\ITI\MVC\Election System - Copy\MVCProject-Election-System-Mohamed 03_21PM\ElectionProgram\obj\Debug\ElectionProgram.pdb
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.Migrations.test.resources

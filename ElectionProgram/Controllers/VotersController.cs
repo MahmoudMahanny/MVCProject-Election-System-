@@ -33,24 +33,21 @@ namespace ElectionProgram.Controllers
         public ActionResult ShowCandidate(int id)
         {
             CandidatesIDVoter ca = new CandidatesIDVoter { VoterID = id, canList = db.Candidate.ToList() };
-
-
-
             return View(ca);
         }
-       
-             public ActionResult Aplay(int id)
+
+        public ActionResult Aplay(int id)
         {
 
             Voter v = (from vo in db.Voter
                        where vo.ID == id
                        select vo).FirstOrDefault();
             db.Voter.Remove(v);
-            Candidate c = new Candidate { Name = v.Name, NID = v.NID, BirthDate = v.BirthDate ,ImagePath=v.ImagePath };
+            Candidate c = new Candidate { Name = v.Name, NID = v.NID, BirthDate = v.BirthDate, ImagePath = v.ImagePath };
             db.Candidate.Add(c);
             db.SaveChanges();
             return RedirectToAction("Details", "Candidates", new { ID = c.ID });
-           
+
         }
         public ActionResult IsVoteMessag(int id)
         {
