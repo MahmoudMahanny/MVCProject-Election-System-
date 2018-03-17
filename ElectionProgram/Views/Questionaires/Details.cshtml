@@ -16,13 +16,38 @@
     <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.Type)
+            @{
+                int counter = 0;
+                var questions = (from quest in Model.Questions
+                                 where quest.QuestionaireID == Model.ID
+                                 select quest.question).ToList();
+                foreach (var item in questions)
+                {
+                    counter++;
+                    <br />
+                    @Html.DisplayName("Question"+@counter);
+                }
+            }
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.Type)
+            @{
+                var questionList = (from quest in Model.Questions
+                                    where quest.QuestionaireID == Model.ID
+                                    select quest.question).ToList();
+                foreach (var item in questionList)
+                {
+                    <div>@item</div>
+                }
+            }
         </dd>
 
     </dl>
+
+
+    
+
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |

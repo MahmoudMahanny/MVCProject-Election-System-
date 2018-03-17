@@ -58,27 +58,6 @@ namespace ElectionProgram.Controllers
             return View(v);
         }
        
-             public ActionResult Aplay(int id)
-        {
-
-            Voter v = (from vo in db.Voter
-                       where vo.ID == id
-                       select vo).FirstOrDefault();
-            db.Voter.Remove(v);
-            Candidate c = new Candidate { Name = v.Name, NID = v.NID, BirthDate = v.BirthDate ,ImagePath=v.ImagePath };
-            db.Candidate.Add(c);
-            db.SaveChanges();
-            return RedirectToAction("Details", "Candidates", new { ID = c.ID });
-           
-        }
-        public ActionResult IsVoteMessag(int id)
-        {
-
-            Voter v = (from vo in db.Voter
-                       where vo.ID == id
-                       select vo).FirstOrDefault();
-            return View(v);
-        }
         [HttpGet]
         public ActionResult Vote(int id)
         {
@@ -122,12 +101,7 @@ namespace ElectionProgram.Controllers
                 CandidateVoter cv = new CandidateVoter { candidate_id = id, Voter_id = VoterID };
                 db.CandidateVoter.Add(cv);
                 db.SaveChanges();
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> 220797f3fcab6a85c4958c31b51d30c86ffa1e13
                 return RedirectToAction("MYPage", new { id = VoterID });
             }
         }

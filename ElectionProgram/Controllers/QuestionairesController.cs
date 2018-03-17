@@ -32,6 +32,9 @@ namespace ElectionProgram.Controllers
             {
                 return HttpNotFound();
             }
+            //var questionList = (from quest in db.Question
+            //               where quest.QuestionaireID == id
+            //               select quest.question).ToList();
             return View(questionaire);
         }
 
@@ -46,11 +49,21 @@ namespace ElectionProgram.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Type")] Questionaire questionaire)
+        public ActionResult Create([Bind(Include = "ID,Type")] Questionaire questionaire, string Question1, string Question2, string Question3, string Question4, string Question5)
         {
             if (ModelState.IsValid)
             {
                 db.Questionaire.Add(questionaire);
+                List<Question> questions = new List<Question>()
+                {
+                    new Question() {question=Question1,QuestionaireID= questionaire.ID },
+                    new Question() {question=Question2,QuestionaireID= questionaire.ID },
+                    new Question() {question=Question3,QuestionaireID= questionaire.ID },
+                    new Question() {question=Question4,QuestionaireID= questionaire.ID },
+                    new Question() {question=Question5,QuestionaireID= questionaire.ID }
+                };
+
+                db.Question.AddRange(questions);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -78,17 +91,38 @@ namespace ElectionProgram.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Type")] Questionaire questionaire)
+        public ActionResult Edit([Bind(Include = "ID,Type")] Questionaire questionaire, string Question_1, string Question_2, string Question_3, string Question_4, string Question_5)
         {
             if (ModelState.IsValid)
             {
                 db.Entry(questionaire).State = EntityState.Modified;
+                //var questions = (from q in db.Question
+                //                 where q.QuestionaireID == questionaire.ID
+                //                 select q.question).ToList();
+                //List<string> qust = new List<string>()
+                //{
+                //Question_1,Question_2,Question_3,Question_4,Question_5
+                //};
+                //int counter = -1;
+                //foreach (string item in questions)
+                //{
+                //    counter++;
+                //    Question_1 = item;
+                //}
+               
+                    List<Question> que = new List<Question>();
+                    que=db.Question.Where(q => q.QuestionaireID == questionaire.ID).ToList();
+                    
+               foreach(var item in que)
+                {
+                 
+                }
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+           
             return View(questionaire);
-        }
-
+    }
         // GET: Questionaires/Delete/5
         public ActionResult Delete(int? id)
         {
@@ -114,6 +148,21 @@ namespace ElectionProgram.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+        //public ActionResult ShowQuestions()
+        //{
+        //    var Questionaires =(from q in db.Questionaire
+        //                        where q.Type == "Candidate"
+        //                        select q.ID).ToList();
+        //    foreach (var item in Questionaires)
+        //    {
+        //        var Questions = from q in db.Question
+        //                            where q.QuestionaireID==5
+        //                            select q.question;
+               
+        //    }
+
+        //    return View();
+        //}
 
         protected override void Dispose(bool disposing)
         {

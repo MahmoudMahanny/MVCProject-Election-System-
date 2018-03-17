@@ -11,30 +11,57 @@
 
 <h2>Create</h2>
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Questionaire</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.LabelFor(model => model.Type, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+        @*<div class="form-group">*@
+            @Html.LabelFor(model => model.Type)
+            @*<div class="col-md-10">*@
                 @Html.EditorFor(model => model.Type, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Type, "", new { @class = "text-danger" })
-            </div>
-        </div>
+            @*</div>
+         </div>*@
+        
+       
+            @Html.Label("Question1") 
+        @Html.TextBox("Question1", null, new { @class = "form-control" })
+        
+        @Html.Label("Question2")
+        @Html.TextBox("Question2", null, new { @class = "form-control" })
+       
+         @Html.Label("Question3")
+        @Html.TextBox("Question3", null, new { @class = "form-control" })
+        
+        @Html.Label("Question4")
+        @Html.TextBox("Question4", null, new { @class = "form-control" })
+        
+        @Html.Label("Question5")
+        @Html.TextBox("Question5", null, new { @class = "form-control" })
 
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+      
+
+                  @*Question 1:<input name="Question1" class="form-control" type="text" /><br />
+                Question 2:<input name="Question2" class="form-control " type="text" /><br />
+                Question 3:<input name="Question3" class="form-control " type="text" /><br />
+                Question 4:<input name="Question4" class="form-control " type="text" /><br />
+                Question 5:<input name="Question5" class="form-control " type="text" /><br />*@
+
+        <br />
             </div>
-        </div>
+            
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </div>
+       
+    }
+
+    <div>
+        @Html.ActionLink("Back to List", "Index")
     </div>
-}
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
