@@ -33,24 +33,21 @@ namespace ElectionProgram.Controllers
         public ActionResult ShowCandidate(int id)
         {
             CandidatesIDVoter ca = new CandidatesIDVoter { VoterID = id, canList = db.Candidate.ToList() };
-
-
-
             return View(ca);
         }
-       
-             public ActionResult Aplay(int id)
+
+        public ActionResult Aplay(int id)
         {
 
             Voter v = (from vo in db.Voter
                        where vo.ID == id
                        select vo).FirstOrDefault();
             db.Voter.Remove(v);
-            Candidate c = new Candidate { Name = v.Name, NID = v.NID, BirthDate = v.BirthDate ,ImagePath=v.ImagePath };
+            Candidate c = new Candidate { Name = v.Name, NID = v.NID, BirthDate = v.BirthDate, ImagePath = v.ImagePath };
             db.Candidate.Add(c);
             db.SaveChanges();
             return RedirectToAction("Details", "Candidates", new { ID = c.ID });
-           
+
         }
         public ActionResult IsVoteMessag(int id)
         {
@@ -60,6 +57,7 @@ namespace ElectionProgram.Controllers
                        select vo).FirstOrDefault();
             return View(v);
         }
+       
         [HttpGet]
         public ActionResult Vote(int id)
         {
@@ -103,6 +101,10 @@ namespace ElectionProgram.Controllers
                 CandidateVoter cv = new CandidateVoter { candidate_id = id, Voter_id = VoterID };
                 db.CandidateVoter.Add(cv);
                 db.SaveChanges();
+<<<<<<< HEAD
+=======
+
+>>>>>>> 147da9621cf7237186759cb407e1c06268b7e563
                 return RedirectToAction("MYPage", new { id = VoterID });
             }
         }

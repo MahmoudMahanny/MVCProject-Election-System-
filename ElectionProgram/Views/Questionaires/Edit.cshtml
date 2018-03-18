@@ -13,7 +13,7 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Questionaire</h4>
         <hr />
@@ -27,6 +27,21 @@
                 @Html.ValidationMessageFor(model => model.Type, "", new { @class = "text-danger" })
             </div>
         </div>
+
+        @{
+            int counter = 0;
+            var questionList = (from quest in Model.Questions
+                                where quest.QuestionaireID == Model.ID
+                                select quest).ToList();
+            foreach (var item in questionList)
+            {
+                counter++;
+                @Html.DisplayName("Question " + @counter);
+                <input class = "form-control" name="Question_@counter" type="text" value="@item.question"/>
+                <br />
+                <br />
+            }
+        }
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
