@@ -13,10 +13,19 @@ namespace ElectionProgram.Controllers
     public class QuestionairesController : Controller
     {
         private DataContext db = new DataContext();
-
+       
         // GET: Questionaires
         public ActionResult Index()
         {
+            if (db.Questionaire.Count() == 0)
+            {
+                Questionaire QCandidate = new Questionaire() { Type = "Candidate" };
+                Questionaire QCopmany = new Questionaire() { Type = "Company" };
+                db.Questionaire.Add(QCandidate);
+                db.Questionaire.Add(QCopmany);
+                db.SaveChanges();
+            }
+
             return View(db.Questionaire.ToList());
         }
 
@@ -41,6 +50,7 @@ namespace ElectionProgram.Controllers
         // GET: Questionaires/Create
         public ActionResult Create()
         {
+            
             return View();
         }
 
@@ -49,18 +59,24 @@ namespace ElectionProgram.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Type")] Questionaire questionaire, string Question1, string Question2, string Question3, string Question4, string Question5)
+        public ActionResult Create([Bind(Include = "ID,Type")] Questionaire questionaire,string QuestionaireType, string Question1, string Question2, string Question3, string Question4, string Question5)
         {
             if (ModelState.IsValid)
             {
-                db.Questionaire.Add(questionaire);
+                 
+
+                var Questionaire = (from q in db.Questionaire
+                            where q.Type == QuestionaireType
+                            select q).FirstOrDefault();
+                //questionaire.Type = QuestionaireType;
+              //  db.Questionaire.Add(questionaire);
                 List<Question> questions = new List<Question>()
                 {
-                    new Question() {question=Question1,QuestionaireID= questionaire.ID },
-                    new Question() {question=Question2,QuestionaireID= questionaire.ID },
-                    new Question() {question=Question3,QuestionaireID= questionaire.ID },
-                    new Question() {question=Question4,QuestionaireID= questionaire.ID },
-                    new Question() {question=Question5,QuestionaireID= questionaire.ID }
+                    new Question() {question=Question1,QuestionaireID= Questionaire.ID },
+                    new Question() {question=Question2,QuestionaireID= Questionaire.ID },
+                    new Question() {question=Question3,QuestionaireID= Questionaire.ID },
+                    new Question() {question=Question4,QuestionaireID= Questionaire.ID },
+                    new Question() {question=Question5,QuestionaireID= Questionaire.ID }
                 };
 
                 db.Question.AddRange(questions);
@@ -91,11 +107,12 @@ namespace ElectionProgram.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Type")] Questionaire questionaire, string Question_1, string Question_2, string Question_3, string Question_4, string Question_5)
+        public ActionResult Edit([Bind(Include = "ID,Type")] Questionaire questionaire,string QuestionaireType, string Question_1, string Question_2, string Question_3, string Question_4, string Question_5)
         {
             if (ModelState.IsValid)
             {
                 db.Entry(questionaire).State = EntityState.Modified;
+                questionaire.Type = QuestionaireType;
                 var questions = (from q in db.Question
                                  where q.QuestionaireID == questionaire.ID
                                  select q).ToList();
@@ -114,21 +131,6 @@ namespace ElectionProgram.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
 
-                //int counter = -1;
-                //foreach (string item in questions)
-                //{
-                //    counter++;
-                //    Question_1 = item;
-                //}
-
-                // List<Question> que = new List<Question>();
-                //     que=db.Question.Where(q => q.QuestionaireID == questionaire.ID).ToList();
-
-                //foreach(var item in que)
-                // {
-
-
-                // }
 
             }
            
@@ -146,6 +148,7 @@ namespace ElectionProgram.Controllers
             {
                 return HttpNotFound();
             }
+
             return View(questionaire);
         }
 
