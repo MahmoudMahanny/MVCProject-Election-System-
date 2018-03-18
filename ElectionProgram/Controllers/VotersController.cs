@@ -100,11 +100,9 @@ namespace ElectionProgram.Controllers
                           select c).FirstOrDefault();
                 ca.NoOfVotes += 1;
                 v.IsVote = true;
-
+                CandidateVoter cv = new CandidateVoter { candidate_id = id, Voter_id = VoterID };
+                db.CandidateVoter.Add(cv);
                 db.SaveChanges();
-
-
-
                 return RedirectToAction("MYPage", new { id = VoterID });
             }
         }

@@ -2,7 +2,7 @@
 }
 
    
-    #header-fixed {
+    .mytable {
     position: fixed;
     top: 0px; display:none;
     background-color:white;
@@ -19,11 +19,7 @@ th, td {
     padding: 8px;
     overflow:auto;
 }
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
+
 
 tr:nth-child(even){background-color: #f2f2f2}
 
