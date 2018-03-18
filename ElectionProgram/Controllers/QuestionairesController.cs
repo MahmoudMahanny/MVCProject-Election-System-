@@ -96,29 +96,40 @@ namespace ElectionProgram.Controllers
             if (ModelState.IsValid)
             {
                 db.Entry(questionaire).State = EntityState.Modified;
-                //var questions = (from q in db.Question
-                //                 where q.QuestionaireID == questionaire.ID
-                //                 select q.question).ToList();
-                //List<string> qust = new List<string>()
-                //{
-                //Question_1,Question_2,Question_3,Question_4,Question_5
-                //};
+                var questions = (from q in db.Question
+                                 where q.QuestionaireID == questionaire.ID
+                                 select q).ToList();
+                db.Question.RemoveRange(questions);
+                List<Question> qust = new List<Question>()
+                {
+
+                    new Question() {question=Question_1,QuestionaireID= questionaire.ID },
+                    new Question() {question=Question_2,QuestionaireID= questionaire.ID },
+                    new Question() {question=Question_3,QuestionaireID= questionaire.ID },
+                    new Question() {question=Question_4,QuestionaireID= questionaire.ID },
+                    new Question() {question=Question_5,QuestionaireID= questionaire.ID }
+                };
+                db.Question.AddRange(qust);
+
+                db.SaveChanges();
+                return RedirectToAction("Index");
+
                 //int counter = -1;
                 //foreach (string item in questions)
                 //{
                 //    counter++;
                 //    Question_1 = item;
                 //}
-               
-                    List<Question> que = new List<Question>();
-                    que=db.Question.Where(q => q.QuestionaireID == questionaire.ID).ToList();
-                    
-               foreach(var item in que)
-                {
-                 
-                }
-                db.SaveChanges();
-                return RedirectToAction("Index");
+
+                // List<Question> que = new List<Question>();
+                //     que=db.Question.Where(q => q.QuestionaireID == questionaire.ID).ToList();
+
+                //foreach(var item in que)
+                // {
+
+
+                // }
+
             }
            
             return View(questionaire);
