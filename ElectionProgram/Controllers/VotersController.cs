@@ -101,10 +101,7 @@ namespace ElectionProgram.Controllers
                 CandidateVoter cv = new CandidateVoter { candidate_id = id, Voter_id = VoterID };
                 db.CandidateVoter.Add(cv);
                 db.SaveChanges();
-<<<<<<< HEAD
-=======
 
->>>>>>> 147da9621cf7237186759cb407e1c06268b7e563
                 return RedirectToAction("MYPage", new { id = VoterID });
             }
         }

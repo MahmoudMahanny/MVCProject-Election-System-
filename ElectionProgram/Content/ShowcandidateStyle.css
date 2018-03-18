@@ -5,12 +5,8 @@
 <<<<<<< HEAD
     .mytable {
 =======
-<<<<<<< HEAD
-    .mytable {
-=======
     #header-fixed {
 >>>>>>> 220797f3fcab6a85c4958c31b51d30c86ffa1e13
->>>>>>> 147da9621cf7237186759cb407e1c06268b7e563
     position: fixed;
     top: 0px; display:none;
     background-color:white;
@@ -30,16 +26,12 @@ th, td {
 <<<<<<< HEAD
 
 =======
-<<<<<<< HEAD
-
-=======
 .sticky {
   position: fixed;
   top: 0;
   width: 100%;
 }
 >>>>>>> 220797f3fcab6a85c4958c31b51d30c86ffa1e13
->>>>>>> 147da9621cf7237186759cb407e1c06268b7e563
 
 tr:nth-child(even){background-color: #f2f2f2}
 
