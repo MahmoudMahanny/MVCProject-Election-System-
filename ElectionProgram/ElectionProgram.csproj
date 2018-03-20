@@ -305,6 +305,8 @@
     <Content Include="Views\Voters\Vote.cshtml" />
     <Content Include="Views\Voters\IsVoteMessag.cshtml" />
     <Content Include="Views\Questionaires\ShowQuestions.cshtml" />
+    <Content Include="Views\Voters\ShowResult.cshtml" />
+    <Content Include="Views\Voters\ShowWinner.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -150,8 +150,7 @@ namespace ElectionProgram.Controllers
             db.SaveChanges();
             return RedirectToAction("MYPage", new { id = voter.ID });
         }
-        
-
+       
         // GET: Voters/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -207,6 +206,20 @@ namespace ElectionProgram.Controllers
             db.Voter.Remove(voter);
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
+
+
+
+        public ActionResult ShowResult()
+        {
+            return View(db.Candidate.ToList());
+        }
+        public ActionResult ShowWinner()
+        {
+            var Top1Candidate = (from c in db.Candidate
+                                 select c).OrderByDescending(c => c.NoOfVotes).Take(1);
+            
+            return View(Top1Candidate);
         }
 
         protected override void Dispose(bool disposing)
