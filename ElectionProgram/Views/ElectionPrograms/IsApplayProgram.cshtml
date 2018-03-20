@@ -1,0 +1,31 @@
+﻿
+@model ElectionProgram.Models.ElectionPrograms
+
+
+@{
+    ViewBag.Title = "IsApplayProgram";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+<h2>IsApplayProgram</h2>
+
+
+@section header
+{
+    <div>
+
+    </div>
+}
+<div style="background-color:darkblue;color:white;font-style:oblique;font-family:'Century Schoolbook';width:50%;height:50%;overflow:auto">
+   
+    <span><img src="@Model.Can.ImagePath " width=50 height=50 /></span>
+    <span class="icon-bar" style="color:white"> @Model.Can.Name </span>
+    <div style="width:50%;height:50%;font-size:20px"><br /><br /><br />
+        is Entered A Program If Like To Edit 
+    </div>
+    <br /><br />
+    <div style="padding-left:50px">
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ID }, new { @class = "btn btn-warning" })
+    </div>
+
+</div>

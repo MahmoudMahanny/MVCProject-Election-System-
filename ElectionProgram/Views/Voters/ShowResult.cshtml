@@ -1,0 +1,43 @@
+﻿@model IEnumerable<ElectionProgram.Models.Candidate>
+
+@{
+    ViewBag.Title = "ShowResult";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+@section header{
+    <h3>ShowResult</h3>
+}
+<h2>ShowResult</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NoOfVotes)
+        </th>
+    </tr>
+    
+    @{ 
+        var Top3Candidate = (from c in Model
+                    select c).OrderByDescending(c => c.NoOfVotes).Take(3);
+    }
+    @foreach (var item in Top3Candidate)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NoOfVotes)
+            </td>
+        </tr>
+    }
+      
+</table>
+
+@*<div class="btn btn-info" style="text-align:center;color:white">
+    @Html.ActionLink("Goto MYPage", "MYPage", new { id = Model.VoterID })
+</div>*@

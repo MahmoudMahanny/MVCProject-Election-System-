@@ -8,7 +8,7 @@ namespace ElectionProgram.Models
     public class Employee
     {
 
-        public int ID { get; set; }
+        
         public string  Name{ get; set; }
         public string ImagePath { get; set; }
         public DateTime BirthDate  { get; set; }

@@ -17,6 +17,14 @@ namespace ElectionProgram.Controllers
         private DataContext db = new DataContext();
 
         // GET: Voters
+       
+       
+        public ActionResult show()
+        {
+            var model = db.Candidate.ToList();
+            return View("_show",model);
+        }
+
         public ActionResult Index()
         {
             return View(db.Voter.ToList());
@@ -42,11 +50,28 @@ namespace ElectionProgram.Controllers
             Voter v = (from vo in db.Voter
                        where vo.ID == id
                        select vo).FirstOrDefault();
-            db.Voter.Remove(v);
+           
             Candidate c = new Candidate { Name = v.Name, NID = v.NID, BirthDate = v.BirthDate, ImagePath = v.ImagePath };
+            if(db.Candidate.ToList().Count==0)
+            {
+                db.Candidate.Add(c);
+                db.SaveChanges();
+                return RedirectToAction("Create", "ElectionPrograms", new { CandidateId = c.ID });
+
+            }
+            foreach (var item in db.Candidate.ToList())
+            {
+                if(item.NID==c.NID)
+                {
+                    var el = (from e in db.ElectionProgram
+                              where e.Can.NID==c.NID
+                              select e).FirstOrDefault();
+                    return RedirectToAction("IsApplayProgram", "ElectionPrograms", new { ElProgID = el.ID });
+                }
+            }
             db.Candidate.Add(c);
             db.SaveChanges();
-            return RedirectToAction("Details", "Candidates", new { ID = c.ID });
+            return RedirectToAction( "Create", "ElectionPrograms", new { CandidateId = c.ID });
 
         }
         public ActionResult IsVoteMessag(int id)
@@ -150,8 +175,7 @@ namespace ElectionProgram.Controllers
             db.SaveChanges();
             return RedirectToAction("MYPage", new { id = voter.ID });
         }
-        
-
+       
         // GET: Voters/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -207,6 +231,20 @@ namespace ElectionProgram.Controllers
             db.Voter.Remove(voter);
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
+
+
+
+        public ActionResult ShowResult()
+        {
+            return View(db.Candidate.ToList());
+        }
+        public ActionResult ShowWinner()
+        {
+            var Top1Candidate = (from c in db.Candidate
+                                 select c).OrderByDescending(c => c.NoOfVotes).Take(1);
+            
+            return View(Top1Candidate);
         }
 
         protected override void Dispose(bool disposing)
