@@ -13,10 +13,43 @@ namespace ElectionProgram.Controllers
     public class QuestionairesController : Controller
     {
         private DataContext db = new DataContext();
-
+       
         // GET: Questionaires
         public ActionResult Index()
         {
+            if (db.Questionaire.Count() == 0)
+            {
+
+                Questionaire QCandidate = new Questionaire() { Type = "Candidate" };
+                Questionaire QCopmany = new Questionaire() { Type = "Company" };
+                db.Questionaire.Add(QCandidate);
+                db.Questionaire.Add(QCopmany);
+                db.SaveChanges();
+            }
+            else 
+                {
+                    var query = (from q in db.Questionaire
+                                 where q.Type == "Company"
+                                 select q).FirstOrDefault();
+                    if (query == null)
+                    {
+                        Questionaire QCopmany = new Questionaire() { Type = "Company" };
+                        db.Questionaire.Add(QCopmany);
+                    db.SaveChanges();
+                }
+
+                    var que= (from q in db.Questionaire
+                                 where q.Type == "Candidate"
+                                 select q).FirstOrDefault();
+                    if (que == null)
+
+                    {
+                        Questionaire QCandidate = new Questionaire() { Type = "Candidate" };
+                        db.Questionaire.Add(QCandidate);
+                    db.SaveChanges();
+                    }
+            }
+
             return View(db.Questionaire.ToList());
         }
 
@@ -41,6 +74,39 @@ namespace ElectionProgram.Controllers
         // GET: Questionaires/Create
         public ActionResult Create()
         {
+            if (db.Questionaire.Count() == 0)
+            {
+
+                Questionaire QCandidate = new Questionaire() { Type = "Candidate" };
+                Questionaire QCopmany = new Questionaire() { Type = "Company" };
+                db.Questionaire.Add(QCandidate);
+                db.Questionaire.Add(QCopmany);
+                db.SaveChanges();
+            }
+            else
+            {
+                var query = (from q in db.Questionaire
+                             where q.Type == "Company"
+                             select q).FirstOrDefault();
+                if (query == null)
+                {
+                    Questionaire QCopmany = new Questionaire() { Type = "Company" };
+                    db.Questionaire.Add(QCopmany);
+                    db.SaveChanges();
+                }
+
+                var que = (from q in db.Questionaire
+                           where q.Type == "Candidate"
+                           select q).FirstOrDefault();
+                if (que == null)
+
+                {
+                    Questionaire QCandidate = new Questionaire() { Type = "Candidate" };
+                    db.Questionaire.Add(QCandidate);
+                    db.SaveChanges();
+                }
+            }
+
             return View();
         }
 
@@ -49,20 +115,60 @@ namespace ElectionProgram.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Type")] Questionaire questionaire, string Question1, string Question2, string Question3, string Question4, string Question5)
+        public ActionResult Create([Bind(Include = "ID,Type")] Questionaire questionaire,string QuestionaireType, string Question1, string Question2, string Question3, string Question4, string Question5)
         {
             if (ModelState.IsValid)
             {
-                db.Questionaire.Add(questionaire);
-                List<Question> questions = new List<Question>()
-                {
-                    new Question() {question=Question1,QuestionaireID= questionaire.ID },
-                    new Question() {question=Question2,QuestionaireID= questionaire.ID },
-                    new Question() {question=Question3,QuestionaireID= questionaire.ID },
-                    new Question() {question=Question4,QuestionaireID= questionaire.ID },
-                    new Question() {question=Question5,QuestionaireID= questionaire.ID }
-                };
+                 
 
+                var Questionaire = (from q in db.Questionaire
+                            where q.Type == QuestionaireType
+                            select q).FirstOrDefault();
+                //questionaire.Type = QuestionaireType;
+                //  db.Questionaire.Add(questionaire);
+                List<Question> questions = new List<Question>();
+                //{
+                //    new Question() {question=Question1,QuestionaireID= Questionaire.ID },
+                //    new Question() {question=Question2,QuestionaireID= Questionaire.ID },
+                //    new Question() {question=Question3,QuestionaireID= Questionaire.ID },
+                //    new Question() {question=Question4,QuestionaireID= Questionaire.ID },
+                //    new Question() {question=Question5,QuestionaireID= Questionaire.ID }
+                //};
+                if (Question1 != "")
+                {
+                    Question que = new Question() { question = Question1, QuestionaireID = Questionaire.ID };
+                    questions.Add(que);
+                    db.SaveChanges();
+
+                }
+                if (Question2 != "")
+                {
+                    Question que = new Question() { question = Question2, QuestionaireID = Questionaire.ID };
+                    questions.Add(que);
+                    db.SaveChanges();
+
+                }
+                if (Question3 != "")
+                {
+                    Question que = new Question() { question = Question3, QuestionaireID = Questionaire.ID };
+                    questions.Add(que);
+                    db.SaveChanges();
+
+                }
+                if (Question4 != "")
+                {
+                    Question que = new Question() { question = Question4, QuestionaireID = Questionaire.ID };
+                    questions.Add(que);
+                    db.SaveChanges();
+
+                }
+                if (Question5 != "")
+                {
+                    Question que = new Question() { question = Question5, QuestionaireID = Questionaire.ID };
+                    questions.Add(que);
+                    db.SaveChanges();
+
+                }
                 db.Question.AddRange(questions);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -95,34 +201,73 @@ namespace ElectionProgram.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(questionaire).State = EntityState.Modified;
-                //var questions = (from q in db.Question
-                //                 where q.QuestionaireID == questionaire.ID
-                //                 select q.question).ToList();
-                //List<string> qust = new List<string>()
-                //{
-                //Question_1,Question_2,Question_3,Question_4,Question_5
-                //};
-                //int counter = -1;
-                //foreach (string item in questions)
-                //{
-                //    counter++;
-                //    Question_1 = item;
-                //}
-               
-                    List<Question> que = new List<Question>();
-                    que=db.Question.Where(q => q.QuestionaireID == questionaire.ID).ToList();
-                    
-               foreach(var item in que)
+               // db.Entry(questionaire).State = EntityState.Modified;
+                // questionaire.Type = QuestionaireType;
+                var questions = (from q in db.Question
+                                 where q.QuestionaireID == questionaire.ID
+                                 select q).ToList();
+                db.Question.RemoveRange(questions);
+                db.SaveChanges();
+                List<Question> qust = new List<Question>()
                 {
-                 
+
+                    new Question() { question = Question_1, QuestionaireID = questionaire.ID },
+                    new Question() { question = Question_2, QuestionaireID = questionaire.ID },
+                    new Question() { question = Question_3, QuestionaireID = questionaire.ID },
+                    new Question() { question = Question_4, QuestionaireID = questionaire.ID },
+                    new Question() { question = Question_5, QuestionaireID = questionaire.ID }
+                };
+
+                if (Question_1 != "")
+                {
+                    Question que = new Question() { question = Question_1, QuestionaireID = questionaire.ID };
+                    questions.Add(que);
+                    db.SaveChanges();
+
                 }
+                if (Question_2 != "")
+                {
+                    Question que = new Question() { question = Question_2, QuestionaireID = questionaire.ID };
+                    questions.Add(que);
+                    db.SaveChanges();
+
+                }
+                if (Question_3 != "")
+                {
+                    Question que = new Question() { question = Question_3, QuestionaireID = questionaire.ID };
+                    questions.Add(que);
+                    db.SaveChanges();
+
+                }
+                if (Question_4 != "")
+                {
+                    Question que = new Question() { question = Question_4, QuestionaireID = questionaire.ID };
+                    questions.Add(que);
+                    db.SaveChanges();
+
+                }
+                if (Question_5 != "")
+                {
+                    Question que = new Question() { question = Question_5, QuestionaireID = questionaire.ID };
+                    questions.Add(que);
+                    db.SaveChanges();
+
+                }
+                db.Question.AddRange(questions);
+                db.SaveChanges();
+
+
+                db.Question.AddRange(qust);
+
                 db.SaveChanges();
                 return RedirectToAction("Index");
+
+
+
             }
-           
-            return View(questionaire);
-    }
+                return View(questionaire);
+            }
+   
         // GET: Questionaires/Delete/5
         public ActionResult Delete(int? id)
         {
@@ -135,6 +280,7 @@ namespace ElectionProgram.Controllers
             {
                 return HttpNotFound();
             }
+
             return View(questionaire);
         }
 

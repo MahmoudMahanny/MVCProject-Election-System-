@@ -12,9 +12,9 @@ namespace ElectionProgram.Controllers
         DataContext context = new DataContext();
         public ActionResult Index()
         {
-            Account acc = new Account() { UserName="admin",Password="admin"};
-            context.Account.Add(acc);
-            context.SaveChanges();
+            //Account acc = new Account() { UserName="admin",Password="admin"};
+            //context.Account.Add(acc);
+            //context.SaveChanges();
             return View();
         }
 

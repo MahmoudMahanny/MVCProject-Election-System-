@@ -25,9 +25,12 @@
                 {
                     counter++;
                     <br />
-                    @Html.DisplayName("Question"+@counter);
+                    if (item != "")
+                    {
+                    @Html.DisplayName("Question" + @counter);
+                        }
+                    }
                 }
-            }
         </dt>
 
         <dd>
@@ -38,7 +41,11 @@
                                     select quest.question).ToList();
                 foreach (var item in questionList)
                 {
-                    <div>@item</div>
+                    if (item != "")
+                    {
+                        <div>@item</div>
+                    }
+
                 }
             }
         </dd>

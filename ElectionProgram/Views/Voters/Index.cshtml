@@ -4,12 +4,22 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_MyLayout.cshtml";
 }
+<<<<<<< HEAD
 
 
 @section header
     {
     <div> </div>
 }
+=======
+
+@section header{
+    <div>voter page</div>
+}
+
+
+
+>>>>>>> ea17350c560c067004ddf1bb5338034ca1c132c1
 <h2>Index</h2>
 
 <p>
@@ -71,11 +81,16 @@
             @Html.DisplayFor(modelItem => item.PIC)
         </td>
         <td>
+<<<<<<< HEAD
 
             @Html.ActionLink("Home", "Home", new { id=item.ID }) |
 
             @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
 
+=======
+            @Html.ActionLink("Home", "Home", new { id=item.ID }) |
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+>>>>>>> ea17350c560c067004ddf1bb5338034ca1c132c1
             @Html.ActionLink("Details", "Details", new { id=item.ID }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.ID })
         </td>

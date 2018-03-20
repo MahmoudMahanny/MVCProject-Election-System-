@@ -307,8 +307,13 @@
     <Content Include="Views\Voters\Vote.cshtml" />
     <Content Include="Views\Voters\IsVoteMessag.cshtml" />
     <Content Include="Views\Questionaires\ShowQuestions.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\ElectionPrograms\IsApplayProgram.cshtml" />
     <Content Include="Views\Voters\_show.cshtml" />
+=======
+    <Content Include="Views\Voters\ShowResult.cshtml" />
+    <Content Include="Views\Voters\ShowWinner.cshtml" />
+>>>>>>> ea17350c560c067004ddf1bb5338034ca1c132c1
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
