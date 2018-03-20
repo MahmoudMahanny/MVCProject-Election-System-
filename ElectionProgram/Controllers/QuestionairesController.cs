@@ -138,35 +138,35 @@ namespace ElectionProgram.Controllers
                 {
                     Question que = new Question() { question = Question1, QuestionaireID = Questionaire.ID };
                     questions.Add(que);
-                   // db.SaveChanges();
+                    db.SaveChanges();
 
                 }
                 if (Question2 != "")
                 {
                     Question que = new Question() { question = Question2, QuestionaireID = Questionaire.ID };
                     questions.Add(que);
-                   // db.SaveChanges();
+                    db.SaveChanges();
 
                 }
                 if (Question3 != "")
                 {
                     Question que = new Question() { question = Question3, QuestionaireID = Questionaire.ID };
                     questions.Add(que);
-                  //  db.SaveChanges();
+                    db.SaveChanges();
 
                 }
                 if (Question4 != "")
                 {
                     Question que = new Question() { question = Question4, QuestionaireID = Questionaire.ID };
                     questions.Add(que);
-                    //db.SaveChanges();
+                    db.SaveChanges();
 
                 }
                 if (Question5 != "")
                 {
                     Question que = new Question() { question = Question5, QuestionaireID = Questionaire.ID };
                     questions.Add(que);
-                    //db.SaveChanges();
+                    db.SaveChanges();
 
                 }
                 db.Question.AddRange(questions);
@@ -208,60 +208,58 @@ namespace ElectionProgram.Controllers
                                  select q).ToList();
                 db.Question.RemoveRange(questions);
                 db.SaveChanges();
-               List<Question> qust = new List<Question>();
-                //{
+                List<Question> qust = new List<Question>()
+                {
 
-                //    new Question() { question = Question_1, QuestionaireID = questionaire.ID },
-                //    new Question() { question = Question_2, QuestionaireID = questionaire.ID },
-                //    new Question() { question = Question_3, QuestionaireID = questionaire.ID },
-                //    new Question() { question = Question_4, QuestionaireID = questionaire.ID },
-                //    new Question() { question = Question_5, QuestionaireID = questionaire.ID }
-                //};
+                    new Question() { question = Question_1, QuestionaireID = questionaire.ID },
+                    new Question() { question = Question_2, QuestionaireID = questionaire.ID },
+                    new Question() { question = Question_3, QuestionaireID = questionaire.ID },
+                    new Question() { question = Question_4, QuestionaireID = questionaire.ID },
+                    new Question() { question = Question_5, QuestionaireID = questionaire.ID }
+                };
 
                 if (Question_1 != "")
                 {
                     Question que = new Question() { question = Question_1, QuestionaireID = questionaire.ID };
-                    qust.Add(que);
-                    //db.SaveChanges();
+                    questions.Add(que);
+                    db.SaveChanges();
 
                 }
                 if (Question_2 != "")
                 {
                     Question que = new Question() { question = Question_2, QuestionaireID = questionaire.ID };
-                    qust.Add(que);
-                    //db.SaveChanges();
+                    questions.Add(que);
+                    db.SaveChanges();
 
                 }
                 if (Question_3 != "")
                 {
                     Question que = new Question() { question = Question_3, QuestionaireID = questionaire.ID };
-                    qust.Add(que);
-                   // db.SaveChanges();
+                    questions.Add(que);
+                    db.SaveChanges();
 
                 }
                 if (Question_4 != "")
                 {
                     Question que = new Question() { question = Question_4, QuestionaireID = questionaire.ID };
-                    qust.Add(que);
-                   // db.SaveChanges();
+                    questions.Add(que);
+                    db.SaveChanges();
 
                 }
                 if (Question_5 != "")
                 {
                     Question que = new Question() { question = Question_5, QuestionaireID = questionaire.ID };
-                    qust.Add(que);
-                    //db.SaveChanges();
+                    questions.Add(que);
+                    db.SaveChanges();
 
                 }
+                db.Question.AddRange(questions);
+                db.SaveChanges();
+
+
                 db.Question.AddRange(qust);
-                db.SaveChanges();
 
-                var delEmptyQue = (from q in db.Question
-                                   where q.question == null
-                                   select q).ToList();
-                db.Question.RemoveRange(delEmptyQue);
                 db.SaveChanges();
-
                 return RedirectToAction("Index");
 
 
