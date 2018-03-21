@@ -1,4 +1,4 @@
-﻿@model IEnumerable<ElectionProgram.Models.Candidate>
+﻿@model ElectionProgram.Models.Candidate
 
 @{
     ViewBag.Title = "ShowWinner";
@@ -12,18 +12,13 @@
 <br />
 <br />
 <br />
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.NoOfVotes)
-        </th>
-    </tr>
+
+@Html.DisplayFor(modelItem => modelItem.Name)
+
+
 
     
-    @foreach (var item in Model)
+    @*@foreach (var item in Model)
     {
         <tr>
             <td>
@@ -33,6 +28,5 @@
                 @Html.DisplayFor(modelItem => item.NoOfVotes)
             </td>
         </tr>
-    }
+    }*@
 
-</table>

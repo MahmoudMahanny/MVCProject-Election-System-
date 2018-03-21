@@ -1,0 +1,38 @@
+﻿@model ElectionProgram.ViewModel.SurveyAnswer
+
+@{
+    ViewBag.Title = "ShowSurveyResult";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+@section header{
+    <div></div>
+    }
+
+<h2>ShowSurveyResult</h2>
+
+<div>
+    <h4>Questionaire</h4>
+    <hr />
+   
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Questions)
+        </dt>
+        @foreach (var item in Model.Questions)
+        {
+            <dt>@item</dt>
+        }
+        <dd>
+            @Html.DisplayNameFor(model => model.avgQuestionAnswer)
+        </dd>
+        @foreach (var item in Model.avgQuestionAnswer)
+        {
+           <dt>@item</dt> 
+        }
+    </dl>
+    <label>@Model.Evaluation</label>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

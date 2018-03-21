@@ -128,3 +128,4 @@ E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgr
 E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.csproj.GenerateResource.Cache
 E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.dll
 E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.pdb
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.Migrations.answertype.resources

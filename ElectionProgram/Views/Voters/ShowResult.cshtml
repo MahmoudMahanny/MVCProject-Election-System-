@@ -21,10 +21,10 @@
     </tr>
     
     @{ 
-        var Top3Candidate = (from c in Model
-                    select c).OrderByDescending(c => c.NoOfVotes).Take(3);
+        var Top2Candidate = (from c in Model
+                    select c).OrderByDescending(c => c.NoOfVotes).Take(2);
     }
-    @foreach (var item in Top3Candidate)
+    @foreach (var item in Top2Candidate)
     {
         <tr>
             <td>

@@ -214,12 +214,28 @@ namespace ElectionProgram.Controllers
         {
             return View(db.Candidate.ToList());
         }
+
         public ActionResult ShowWinner()
         {
-            var Top1Candidate = (from c in db.Candidate
-                                 select c).OrderByDescending(c => c.NoOfVotes).Take(1);
+            var Top2Candidate = (from c in db.Candidate
+                                 select c).OrderByDescending(c => c.NoOfVotes).Take(2).ToList();
+
+            if (Top2Candidate[0].NoOfVotes == Top2Candidate[1].NoOfVotes)
+            {
+                return RedirectToAction("RepeatedElection");
+
+            }
+            //else if (Top2Candidate[0].NoOfVotes > Top2Candidate[1].NoOfVotes)
+           
+            //    return View(Top2Candidate[0]);
             
-            return View(Top1Candidate);
+            return View(Top2Candidate[0]);
+        }
+        public ActionResult RepeatedElection()
+        {
+            var Top2Candidate = (from c in db.Candidate
+                                 select c).OrderByDescending(c => c.NoOfVotes).Take(2).ToList();
+            return View(Top2Candidate);
         }
 
         protected override void Dispose(bool disposing)

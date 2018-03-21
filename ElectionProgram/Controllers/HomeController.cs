@@ -15,6 +15,9 @@ namespace ElectionProgram.Controllers
             //Account acc = new Account() { UserName="admin",Password="admin"};
             //context.Account.Add(acc);
             //context.SaveChanges();
+            //Answer ans = new Answer() { answer = 11 };
+            //context.Answer.Add(ans);
+            //context.SaveChanges();
             return View();
         }
 
