@@ -143,12 +143,17 @@ namespace ElectionProgram.Controllers
                     string path = HttpContext.Server.MapPath("~/Content/images/");
                     file.SaveAs(path + file.FileName);
 
-                    voter.ImagePath ="/Content/images/"+ file.FileName;
+                    voter.ImagePath = "/Content/images/" + file.FileName;
                 }
+
+                db.Voter.Add(voter);
+                db.SaveChanges();
+                return RedirectToAction("MYPage", new { id = voter.ID });
             }
-            db.Voter.Add(voter);
-            db.SaveChanges();
-            return RedirectToAction("MYPage", new { id = voter.ID });
+            else
+            {
+                return View(voter);
+            }
         }
        
         // GET: Voters/Edit/5
