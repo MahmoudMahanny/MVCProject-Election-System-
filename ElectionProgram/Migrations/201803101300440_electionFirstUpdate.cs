@@ -19,18 +19,18 @@ namespace ElectionProgram.Migrations
                 .ForeignKey("dbo.Elections", t => t.election_ID)
                 .Index(t => t.election_ID);
             
-            AddColumn("dbo.Admins", "PIC", c => c.Binary());
-            AddColumn("dbo.Candidates", "PIC", c => c.Binary());
-            AddColumn("dbo.Voters", "PIC", c => c.Binary());
+            AddColumn("dbo.Admins", "ImagePath", c => c.Binary());
+            AddColumn("dbo.Candidates", "ImagePath", c => c.Binary());
+            AddColumn("dbo.Voters", "ImagePath", c => c.Binary());
         }
         
         public override void Down()
         {
             DropForeignKey("dbo.ElectionSymbols", "election_ID", "dbo.Elections");
             DropIndex("dbo.ElectionSymbols", new[] { "election_ID" });
-            DropColumn("dbo.Voters", "PIC");
-            DropColumn("dbo.Candidates", "PIC");
-            DropColumn("dbo.Admins", "PIC");
+            DropColumn("dbo.Voters", "ImagePath");
+            DropColumn("dbo.Candidates", "ImagePath");
+            DropColumn("dbo.Admins", "ImagePath");
             DropTable("dbo.ElectionSymbols");
         }
     }
