@@ -29,6 +29,11 @@ namespace ElectionProgram.Controllers
                        select vo).FirstOrDefault();
             return View(v);
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet]
         public ActionResult ShowCandidate(int id)
         {
