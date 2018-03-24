@@ -269,7 +269,10 @@ namespace ElectionProgram.Controllers
         }
         public ActionResult ShowSurveyResult(int id)
         {
-            Questionaire qu = new Questionaire() { ID = id };
+            Questionaire qu = new Questionaire();
+             qu = (from q in db.Questionaire
+                       where q.ID == id
+                       select q).FirstOrDefault();
             int sum=0;
             float avgSum = 0;
             int NoOfQue;
@@ -277,19 +280,22 @@ namespace ElectionProgram.Controllers
             List<float> avgoOfQuestions = new List<float>();
             float serveyResult;
             SurveyAnswer surveyanswer = new SurveyAnswer();
-            if (qu.Type=="Company")
-            {
+            //surveyanswer.Evaluation = "test";
 
+            if (qu.Type == "Company")
+            {
                 var questions = (from q in db.Question
-                             where q.QuestionaireID == qu.ID
-                             select q).ToList();
-                surveyanswer.Questions.AddRange(questions);
+                                 where q.QuestionaireID ==id
+                                 select q).ToList();
+               
+            
+               surveyanswer.Questions.AddRange(questions);
                 NoOfQue = surveyanswer.Questions.Count;
                 foreach (var item in surveyanswer.Questions)
                 {
-                    var answers=(from a in db.Answer
-                                where a.Question.ID==item.ID
-                                select a.answer).ToList();
+                    var answers = (from a in db.Answer
+                                   where a.Question.ID == item.ID
+                                   select a.answer).ToList();
                     int noOfAnswers = answers.Count;
                     foreach (var ans in answers)
                     {
@@ -298,38 +304,38 @@ namespace ElectionProgram.Controllers
                     }
                     avgOfQue = sum / noOfAnswers;
                     surveyanswer.avgQuestionAnswer.Add(avgOfQue);
-                   // avgoOfQuestions.Add(avgOfQue);
+                    // avgoOfQuestions.Add(avgOfQue);
                 }
                 foreach (float item in surveyanswer.avgQuestionAnswer)
-                {   
+                {
                     avgSum += item;
                 }
 
                 int noOfavgs = surveyanswer.avgQuestionAnswer.Count;
-                float totalMark= NoOfQue * 5;
+                float totalMark = NoOfQue * 5;
 
-               serveyResult =((avgSum / noOfavgs)/ totalMark)*100;
+                serveyResult = ((avgSum / noOfavgs) / totalMark) * 100;
 
                 if (serveyResult < 50)
                     surveyanswer.Evaluation = "Low Performance";
-                else if(serveyResult <65 && serveyResult>=50)
+                else if (serveyResult < 65 && serveyResult >= 50)
                     surveyanswer.Evaluation = "accepted Performance";
-                else if (serveyResult >= 65 && serveyResult <75 )
+                else if (serveyResult >= 65 && serveyResult < 75)
                     surveyanswer.Evaluation = "Good Performance";
-                else if (serveyResult >=75 && serveyResult < 85)
+                else if (serveyResult >= 75 && serveyResult < 85)
                     surveyanswer.Evaluation = " Very Good Performance";
-                else if (serveyResult >=85 && serveyResult <= 100)
+                else if (serveyResult >= 85 && serveyResult <= 100)
                     surveyanswer.Evaluation = "Excellent Performance";
-                
+
             }
             else if (qu.Type == "Candidate")
             {
                 var questions = (from q in db.Question
                                  where q.QuestionaireID == qu.ID
                                  select q).ToList();
-                surveyanswer.Questions.AddRange(questions);
-                NoOfQue = questions.Count;
-                foreach (var item in questions)
+                //surveyanswer.Questions.AddRange(questions);
+                NoOfQue = surveyanswer.Questions.Count;
+                foreach (var item in surveyanswer.Questions)
                 {
                     var answers = (from a in db.Answer
                                    where a.Question.ID == item.ID
@@ -366,8 +372,6 @@ namespace ElectionProgram.Controllers
                     surveyanswer.Evaluation = "Excellent Performance";
 
             }
-
-
             return View(surveyanswer);
         }
         // GET: Questionaires/Delete/5
