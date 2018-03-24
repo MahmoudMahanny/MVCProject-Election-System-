@@ -9,8 +9,9 @@ namespace ElectionProgram.ViewModel
 {
     public class SurveyAnswer
     {
-        public List<Question> Questions { get; set; }
-        public List<float> avgQuestionAnswer { get; set; }
+        public List<Question> Questions = new List<Question>();
+
+        public List<float> avgQuestionAnswer = new List<float>();
         public string Evaluation { get; set; }
     }
 }
