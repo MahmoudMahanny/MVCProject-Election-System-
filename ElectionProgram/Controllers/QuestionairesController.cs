@@ -13,7 +13,7 @@ namespace ElectionProgram.Controllers
 {
     public class QuestionairesController : Controller
     {
-        private DataContext db = new DataContext();
+        private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Questionaires
         public ActionResult Index()

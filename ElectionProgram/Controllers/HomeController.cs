@@ -9,7 +9,7 @@ namespace ElectionProgram.Controllers
 {
     public class HomeController : Controller
     {
-        DataContext context = new DataContext();
+        ApplicationDbContext context = new ApplicationDbContext();
         public ActionResult Index()
         {
             //Account acc = new Account() { UserName="admin",Password="admin"};

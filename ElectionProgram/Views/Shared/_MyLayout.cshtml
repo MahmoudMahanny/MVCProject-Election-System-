@@ -13,7 +13,7 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top " style="height:70px; background-color:darkcyan">
+    <div class="navbar navbar-inverse navbar-fixed-top " style="height:140px; background-color:#58614e">
         <div class="container ">
             @*<div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -23,7 +23,16 @@
                 </button>
                 
             </div>*@
-            @RenderSection("header", true)
+
+            <div id="header">
+                <div class="clearfix">
+                    <div class="logo">
+                        <a href="index.html"><img src="~/Content/images/Hong_Kong_District_Council_Election_Logo.svg.png" alt="LOGO" height="120" width="120"></a>
+                    </div>
+                    @RenderSection("header", true)
+                </div>
+            </div>
+            
             
         </div>
     </div>

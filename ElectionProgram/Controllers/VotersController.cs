@@ -14,7 +14,7 @@ namespace ElectionProgram.Controllers
 {
     public class VotersController : Controller
     {
-        private DataContext db = new DataContext();
+        private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Voters
         public ActionResult Index()
