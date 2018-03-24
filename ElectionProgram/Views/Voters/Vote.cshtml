@@ -4,40 +4,29 @@
     Layout = "~/Views/Shared/_MyLayout.cshtml";
 }
 @section header{
-    <div style="color:white;font-family:'Sakkal Majalla';font-size:20px">Votting Page</div>
+    <div>Votting Page</div>
 }
 <div style="margin-top:20px"></div>
     
         @using (Html.BeginForm("change", "Voters", FormMethod.Post))
         {
-
-
-
-
-
+            
             foreach (var item in Model.canList)
             {
-
-
               <div style="background-color:#f2f2f2 ;margin-top:10px" >@item.Name </div>
                 // @Html.RadioButton("id", @item.ID,new {@unchecked=true} ) <span>Vote</span>
                <input name="id"type="radio" value="@item.ID"/>
                   
-                   
-                  
                 @Html.Hidden("VoterID", Model.VoterID)
-
-
-               
-
+                
                    }
               <br />
               <input type="submit" value="Applay Vote"class="btn btn-primary" />
                }
 
 
-              <div class="btn btn-success" style="margin:0.5px">@Html.ActionLink("Goto MYPage", "MYPage", new { id = Model.VoterID })
-</div>
+              @Html.ActionLink("Goto MYPage", "MYPage", new { id = Model.VoterID })
+
 
 
 

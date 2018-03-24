@@ -11,8 +11,7 @@ namespace ElectionProgram.Models
         //public int ID { get; set; }
         [DefaultValue("0")]
         public int NoOfVotes { get; set; }
-       
-
+      
         public virtual Account Account { get; set; }
         public virtual ElectionPrograms ElectionProgram { get; set; }
         public virtual Election Election { get; set; }

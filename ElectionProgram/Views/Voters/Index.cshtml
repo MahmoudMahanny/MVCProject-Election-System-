@@ -8,9 +8,6 @@
 @section header{
     <div>voter page</div>
 }
-
-
-
 <h2>Index</h2>
 
 <p>
@@ -40,7 +37,7 @@
             @Html.DisplayNameFor(model => model.CareerPosition)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.PIC)
+            @Html.DisplayNameFor(model => model.ImagePath)
         </th>
         <th></th>
     </tr>
@@ -69,7 +66,7 @@
             @Html.DisplayFor(modelItem => item.CareerPosition)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.PIC)
+            <img src="@item.ImagePath" width="150" height="150"/>
         </td>
         <td>
             @Html.ActionLink("Home", "Home", new { id=item.ID }) |

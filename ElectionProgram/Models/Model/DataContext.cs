@@ -9,9 +9,9 @@ namespace ElectionProgram.Models
     public class DataContext:DbContext
     {
         //Alaa
-        public DataContext() : base("Data Source=.;Initial Catalog=Election;Integrated Security=True")
+        //public DataContext() : base("Data Source=.;Initial Catalog=Election;Integrated Security=True")
         //mahmoud
-        //public DataContext():base(@"Data Source=DESKTOP-C3NTTGB\M_MAHANNY;Initial Catalog=ElectionSystem;Integrated Security=True")
+        public DataContext():base(@"Data Source=DESKTOP-C3NTTGB\M_MAHANNY;Initial Catalog=ElectionSystem;Integrated Security=True")
         //Mohamed
         // public DataContext() : base("Data Source=MOHAMEDSAYED-PC;Initial Catalog=ElectionSystem;Integrated Security=True")
 

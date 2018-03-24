@@ -98,7 +98,7 @@ namespace ElectionProgram.Controllers
                           select c).FirstOrDefault();
                 ca.NoOfVotes += 1;
                 v.IsVote = true;
-                CandidateVoter cv = new CandidateVoter { candidate_id = id, Voter_id = VoterID };
+                CandidateVoter cv = new CandidateVoter { candidate_id = ca.ID, Voter_id = v.ID };
                 db.CandidateVoter.Add(cv);
                 db.SaveChanges();
 
@@ -134,7 +134,7 @@ namespace ElectionProgram.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
 
-        public ActionResult Create([Bind(Include = "ID,Name,BirthDate,Gender,NID,Address,Phone,CareerPosition,PIC")] Voter voter, HttpPostedFileBase file)
+        public ActionResult Create([Bind(Include = "ID,Name,BirthDate,Gender,NID,Address,Phone,CareerPosition,ImagePath")] Voter voter, HttpPostedFileBase file)
         {
             if (ModelState.IsValid)
             {
@@ -143,12 +143,17 @@ namespace ElectionProgram.Controllers
                     string path = HttpContext.Server.MapPath("~/Content/images/");
                     file.SaveAs(path + file.FileName);
 
-                    voter.ImagePath ="/Content/images/"+ file.FileName;
+                    voter.ImagePath = "/Content/images/" + file.FileName;
                 }
+
+                db.Voter.Add(voter);
+                db.SaveChanges();
+                return RedirectToAction("MYPage", new { id = voter.ID });
             }
-            db.Voter.Add(voter);
-            db.SaveChanges();
-            return RedirectToAction("MYPage", new { id = voter.ID });
+            else
+            {
+                return View(voter);
+            }
         }
        
         // GET: Voters/Edit/5
@@ -171,11 +176,19 @@ namespace ElectionProgram.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Name,BirthDate,Gender,NID,Address,Phone,CareerPosition,PIC")] Voter voter)
+        public ActionResult Edit([Bind(Include = "ID,Name,BirthDate,Gender,NID,Address,Phone,CareerPosition,ImagePath")] Voter voter, HttpPostedFileBase file)
         {
             if (ModelState.IsValid)
             {
+                
                 db.Entry(voter).State = EntityState.Modified;
+                if (file != null)
+                {
+                    string path = HttpContext.Server.MapPath("~/Content/images/");
+                    file.SaveAs(path + file.FileName);
+
+                    voter.ImagePath = "/Content/images/" + file.FileName;
+                }
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }

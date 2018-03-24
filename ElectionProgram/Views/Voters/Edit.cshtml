@@ -4,17 +4,12 @@
     ViewBag.Title = "Edit";
     Layout = "~/Views/Shared/_MyLayout.cshtml";
 }
-<<<<<<< HEAD
-@section header{
-    <div>mohamed sayed</div>
-}
-=======
+
 @section header
     {
     <div> </div>
 }
 
->>>>>>> 30c6e408bb89d6d87169c2b3e6b6ac2c6b5e1a0c
 <h2>Edit</h2>
 
 @using (Html.BeginForm())
@@ -38,7 +33,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.BirthDate, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.BirthDate, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.TextBoxFor(model => model.BirthDate, new { @type = "date", @class = "form-control", @Value = Model.BirthDate.ToString("yyyy-MM-dd") })
                 @Html.ValidationMessageFor(model => model.BirthDate, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -84,10 +79,11 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.PIC, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.ImagePath, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.PIC, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.PIC, "", new { @class = "text-danger" })
+                <img src="@Model.ImagePath" width="150" height="150" />
+                <input id="ImagePath" class="btn btn-default" title="Upload a image" type="file" name="file" />
+
             </div>
         </div>
 

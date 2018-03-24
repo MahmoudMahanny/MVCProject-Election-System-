@@ -34,7 +34,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.BirthDate, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.BirthDate, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.BirthDate, new { @type = "date", htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.BirthDate, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -80,25 +80,11 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.PIC, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.ImagePath, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.PIC, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.PIC, "", new { @class = "text-danger" })
+                        <input id="ImagePath" class="btn btn-default" title="Upload a image"type="file" name="file" />
             </div>
         </div>
-
-        <fieldset>
-            <legend>Image</legend>
-            <div class="editor-label">
-                @Html.LabelFor(model => model.ImagePath)
-            </div>
-            <div class="editor-field">
-                <input id="ImagePath" title="Upload a product image"
-                       type="file" name="file" />
-            </div>
-            
-        </fieldset>
-
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
@@ -111,3 +97,6 @@
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
+@section scripts{
+        @Scripts.Render("~/bundles/jqueryval")
+    }
