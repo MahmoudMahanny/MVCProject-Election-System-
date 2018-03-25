@@ -8,34 +8,30 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Election System</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top " style="height:140px; background-color:#58614e">
+<body >
+    <div class="navbar navbar-inverse " style="height:100px; background-color:#58614e;">
         <div class="container ">
-            @*<div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                
-            </div>*@
-
-            <div id="header">
+            
+            <div id="header" >
                 <div class="clearfix">
-                    <div class="logo">
-                        <a href="index.html"><img src="~/Content/images/Hong_Kong_District_Council_Election_Logo.svg.png" alt="LOGO" height="120" width="120"></a>
+                    <div class="logo"style="float:left">
+                        <a href="#"><img src="~/Content/images/Hong_Kong_District_Council_Election_Logo.svg.png" alt="LOGO" height="100" width="100"></a>
                     </div>
                     @RenderSection("header", true)
+                    <div style="clear:both"></div>
                 </div>
+                <div style="clear:both"></div>
             </div>
             
             
         </div>
     </div>
+    <div style="clear:both"></div>
+
     <div class="container body-content">
         @RenderBody()
         <hr />

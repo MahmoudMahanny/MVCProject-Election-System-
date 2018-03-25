@@ -52,14 +52,6 @@ D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\Syste
 D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\System.Web.WebPages.Razor.xml
 D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\Antlr3.Runtime.pdb
 D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\Newtonsoft.Json.xml
-D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.Migrations.InitialCreate.resources
-D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.Migrations.electionFirstUpdate.resources
-D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.Migrations.electionSecondUpdate.resources
-D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.Migrations.electiUpdate.resources
-D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.Migrations.testt.resources
-D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.Migrations.test21.resources
-D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.Migrations.test.resources
-D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.csproj.GenerateResource.Cache
 D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.dll
 D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.pdb
 D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.csprojResolveAssemblyReference.cache
@@ -119,7 +111,6 @@ E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgr
 E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Newtonsoft.Json.xml
 E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.dll
 E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.pdb
-D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.Migrations.answertype.resources
 E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.AspNet.Identity.Core.dll
 E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.AspNet.Identity.EntityFramework.dll
 E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.AspNet.Identity.Owin.dll
@@ -138,3 +129,20 @@ E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgr
 E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.csprojResolveAssemblyReference.cache
 E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.Owin.Host.SystemWeb.dll
 E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.AspNet.Identity.Core.dll
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.Owin.dll
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.Owin.Security.Cookies.dll
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.Owin.Security.dll
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.Owin.Security.OAuth.dll
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\Owin.dll
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.AspNet.Identity.Core.xml
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.Owin.xml
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.Owin.Security.xml
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.Owin.Security.Cookies.xml
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.Owin.Security.OAuth.xml

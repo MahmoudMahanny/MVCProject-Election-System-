@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using Microsoft.AspNet.Identity.Owin;
-
+using Microsoft.AspNet.Identity;
 
 namespace ElectionProgram.Controllers
 {
@@ -53,37 +53,38 @@ namespace ElectionProgram.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Registeration(RegistrationVM User)
+        public async Task<ActionResult> Registeration(RegistrationVM _User)
         {
             if (ModelState.IsValid == false)
             {
-                return View(User);
+                return View(_User);
             }
             ApplicationUser AppUser = new ApplicationUser()
             {
-                UserName = User.UserName,
-                PasswordHash = User.Password,
-                Email = User.Email,
-                Address = User.Address,
-                BirthDate = User.BirthDate,
-                Gender = User.Gender,
-                ImagePath = User.ImagePath,
-                NID = User.NID,
-                PhoneNumber = User.Phone
+                UserName = _User.UserName,
+                PasswordHash = _User.Password,
+                Email = _User.Email,
+                Address = _User.Address,
+                BirthDate = _User.BirthDate,
+                Gender = _User.Gender,
+                ImagePath = _User.ImagePath,
+                NID = _User.NID,
+                PhoneNumber = _User.Phone
             };
+            
             ApplicationUserStore store = new ApplicationUserStore(new ApplicationDbContext());
             ApplicationUserManager manager = new ApplicationUserManager(store);
 
             var identityResult = await manager.CreateAsync(AppUser, AppUser.PasswordHash );
             if (identityResult.Succeeded)
             {
-               //var roleResult =  await manager.AddToRoleAsync(AppUser.Id,"Voter");
+                //var roleResult =  await manager.AddToRoleAsync(AppUser.Id,"Voter");
                 IAuthenticationManager Authentication = HttpContext.GetOwinContext().Authentication;
                 ApplicationSignInManager signInManager = new ApplicationSignInManager(manager, Authentication);
                 await signInManager.SignInAsync(AppUser, false, false);
-                return RedirectToAction("Index", "Voters");
+                return RedirectToAction("MYPage", "Voters", new { id = AppUser.Id});
             }
-            return View(User);
+            return View(_User);
 
         }
         public ActionResult LogIN()
@@ -92,28 +93,28 @@ namespace ElectionProgram.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> LogIN(LogInVM User)
+        public async Task<ActionResult> LogIN(LogInVM _User)
         {
             if (ModelState.IsValid == true)
             {
                 ApplicationUserManager manager = new ApplicationUserManager(
                     new ApplicationUserStore(new ApplicationDbContext())
                     );
-                ApplicationUser AppUser = await manager.FindByNameAsync(User.UserName);
+                ApplicationUser AppUser = await manager.FindByNameAsync(_User.UserName);
                 if (AppUser !=null)
                 {
-                    if (await manager.CheckPasswordAsync(AppUser,User.Password))
+                    if (await manager.CheckPasswordAsync(AppUser,_User.Password))
                     {
                         IAuthenticationManager Authentication = HttpContext.GetOwinContext().Authentication;
                         ApplicationSignInManager signInManager = new ApplicationSignInManager(manager, Authentication);
                         await signInManager.SignInAsync(AppUser, false, false);
-                        return RedirectToAction("Index", "Voters");
+                        return RedirectToAction("MYPage", "Voters", new { id = AppUser.Id });
                     }
-                    return View(User);
+                    return View(_User);
                 }
-                return View(User);
+                return View(_User);
             }
-            return View(User);
+            return View(_User);
         }
         public ActionResult LogOut(string id)
         {

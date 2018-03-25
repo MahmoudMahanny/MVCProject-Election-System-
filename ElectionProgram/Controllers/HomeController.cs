@@ -12,12 +12,7 @@ namespace ElectionProgram.Controllers
         ApplicationDbContext context = new ApplicationDbContext();
         public ActionResult Index()
         {
-            //Account acc = new Account() { UserName="admin",Password="admin"};
-            //context.Account.Add(acc);
-            //context.SaveChanges();
-            //Answer ans = new Answer() { answer = 11 };
-            //context.Answer.Add(ans);
-            //context.SaveChanges();
+           
             return View();
         }
 

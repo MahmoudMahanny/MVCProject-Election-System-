@@ -12,6 +12,7 @@ using ElectionProgram.ShowModel;
 
 namespace ElectionProgram.Controllers
 {
+    [Authorize]
     public class VotersController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -22,12 +23,12 @@ namespace ElectionProgram.Controllers
             return View(db.Voter.ToList());
         }
         [HttpGet]
-        public ActionResult MYPage(int id)
+        public ActionResult MYPage(string id)
         {
-            Voter v = (from vo in db.Voter
-                       where vo.ID == id
+            ApplicationUser User = (from vo in db.Users
+                       where vo.Id == id
                        select vo).FirstOrDefault();
-            return View(v);
+            return View(User);
         }
         /// <summary>
         /// 
@@ -35,7 +36,7 @@ namespace ElectionProgram.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet]
-        public ActionResult ShowCandidate(int id)
+        public ActionResult ShowCandidate(string id)
         {
             CandidatesIDVoter ca = new CandidatesIDVoter { VoterID = id, canList = db.Candidate.ToList() };
             return View(ca);
@@ -64,11 +65,11 @@ namespace ElectionProgram.Controllers
         }
        
         [HttpGet]
-        public ActionResult Vote(int id)
+        public ActionResult Vote(string id)
         {
 
-            Voter v = (from vo in db.Voter
-                       where vo.ID == id
+            var v = (from vo in db.Users
+                       where vo.Id == id
                        select vo).FirstOrDefault();
             if (v.IsVote == true)
             {

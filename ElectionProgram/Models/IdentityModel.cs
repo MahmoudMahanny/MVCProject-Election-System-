@@ -38,6 +38,7 @@ namespace ElectionProgram.Models
 
         //[DisplayName("Profile Image")]
         public string ImagePath { get; set; }
+        public bool IsVote { get; set; }
 
     }
     public class ApplicationDbContext: IdentityDbContext<ApplicationUser>

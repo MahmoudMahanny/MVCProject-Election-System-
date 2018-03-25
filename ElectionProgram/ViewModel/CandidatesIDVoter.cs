@@ -8,7 +8,7 @@ namespace ElectionProgram.ShowModel
 {
     public class CandidatesIDVoter
     {
-        public int VoterID { get; set; }
+        public string VoterID { get; set; }
         public List<Candidate> canList{ get; set; }
     }
 }
