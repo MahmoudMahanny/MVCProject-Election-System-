@@ -226,6 +226,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup1.cs" />
     <Compile Include="ViewModel\CandidatesIDVoter.cs" />
+    <Compile Include="ViewModel\ElectionCadidates.cs" />
     <Compile Include="ViewModel\SurveyAnswer.cs" />
   </ItemGroup>
   <ItemGroup>

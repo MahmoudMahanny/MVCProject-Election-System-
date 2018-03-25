@@ -10,26 +10,22 @@
     <div>
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                <button type="button" class="navbar-toggle"  data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav"style="font-size:20px;margin-top:20px">
                     <li>@Html.ActionLink("show candidates","ShowCandidate", new { id= Model.Id })</li>
                     <li>@Html.ActionLink("Vote", "Vote",new {  id = Model.Id })</li>
                     <li>@Html.ActionLink("Aplay As Candidate", "Aplay", new { id = Model.Id })
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                     <li>@Html.ActionLink("Show Election Result", "ShowResult", "Voters")</li>
-                    <li>@Html.ActionLink("Show Winner", "ShowWinner", "Voters")</li>
                 </ul>
                
                 <span ><img src="@Model.ImagePath " width=50 height=50 /></span>
-                <span class="icon-bar" style="color:white"> @Model.UserName </span>
+                <span class="icon-bar" style="color:white;font-size:20px;margin:50px"> @Model.UserName </span>
                           
             </div>
         </div>

@@ -8,15 +8,16 @@ using System.Web;
 using System.Web.Mvc;
 using ElectionProgram.Models;
 using ElectionProgram.ShowModel;
-
+using ElectionProgram.ViewModel;
+using Microsoft.AspNet.Identity;
 
 namespace ElectionProgram.Controllers
 {
     [Authorize]
     public class VotersController : Controller
     {
+        string ApplicationUserID;
         private ApplicationDbContext db = new ApplicationDbContext();
-
         // GET: Voters
         public ActionResult Index()
         {
@@ -25,7 +26,8 @@ namespace ElectionProgram.Controllers
         [HttpGet]
         public ActionResult MYPage(string id)
         {
-            ApplicationUser User = (from vo in db.Users
+            ApplicationUserID = id;
+        ApplicationUser User = (from vo in db.Users
                        where vo.Id == id
                        select vo).FirstOrDefault();
             return View(User);
@@ -55,56 +57,52 @@ namespace ElectionProgram.Controllers
             return RedirectToAction("Details", "Candidates", new { ID = c.ID });
 
         }
-        public ActionResult IsVoteMessag(int id)
+        public ActionResult IsVoteMessag(string id)
         {
 
-            Voter v = (from vo in db.Voter
-                       where vo.ID == id
-                       select vo).FirstOrDefault();
-            return View(v);
+            ApplicationUser AppUser = (from vo in db.Users
+                                       where vo.Id == id
+                                       select vo).FirstOrDefault();
+            return View(AppUser);
         }
        
         [HttpGet]
         public ActionResult Vote(string id)
         {
 
-            var v = (from vo in db.Users
+            ApplicationUser AppUser = (from vo in db.Users
                        where vo.Id == id
                        select vo).FirstOrDefault();
-            if (v.IsVote == true)
+            if (AppUser.IsVote == true)
             {
                 return RedirectToAction("IsVoteMessag", new { ID = id });
             }
             else
             {
-
                 CandidatesIDVoter ca = new CandidatesIDVoter { VoterID = id, canList = db.Candidate.ToList() };
-
-
-
                 return View(ca);
             }
+
         }
         [HttpPost]
-        public ActionResult change(int id,int VoterID)
+        public ActionResult Vote(int CandidateId,string VoterID)
         {
             
-            Voter v = (from vo in db.Voter
-                       where vo.ID == VoterID
-                       select vo).FirstOrDefault();
-            if (v.IsVote == true)
+            ApplicationUser AppUser = (from APPUSER in db.Users
+                       where APPUSER.Id == VoterID
+                       select APPUSER).FirstOrDefault();
+            if (AppUser.IsVote == true)
             {
                 return RedirectToAction("MYPage", new { id = VoterID });
-                
             }
             else
             {
-                var ca = (from c in db.Candidate
-                          where c.ID == id
+                var candidate = (from c in db.Candidate
+                          where c.ID == CandidateId
                           select c).FirstOrDefault();
-                ca.NoOfVotes += 1;
-                v.IsVote = true;
-                CandidateVoter cv = new CandidateVoter { candidate_id = ca.ID, Voter_id = v.ID };
+                candidate.NoOfVotes += 1;
+                AppUser.IsVote = true;
+                CandidateVoter cv = new CandidateVoter { candidate_id = candidate.ID, ApplicationUserID = AppUser.Id };
                 db.CandidateVoter.Add(cv);
                 db.SaveChanges();
 
@@ -227,11 +225,39 @@ namespace ElectionProgram.Controllers
             return RedirectToAction("Index");
         }
 
-
-
+        [HttpGet]
         public ActionResult ShowResult()
         {
-            return View(db.Candidate.ToList());
+            ElectionCadidates electionCandidate = new ElectionCadidates();
+
+            ApplicationUserStore store = new ApplicationUserStore(new ApplicationDbContext());
+            ApplicationUserManager manager = new ApplicationUserManager(store);
+
+
+            Election ele = (from e in db.Election
+                            select e).FirstOrDefault();
+            //var asd = User.Identity.GetUserId();
+            electionCandidate.ElectionId = ele.ID;
+            electionCandidate.candidateList = db.Candidate.ToList();
+            electionCandidate.AppUserID = ApplicationUserID;
+            return View(electionCandidate);
+        }
+        [HttpPost]
+        public ActionResult ShowResult(ElectionCadidates electionCandidate)
+        {
+
+            Election e = (from ele in db.Election
+                          where ele.ID == electionCandidate.ElectionId
+                          select ele).FirstOrDefault();
+
+            if (e.EndDate<System.DateTime.Now)
+            {
+                return View(electionCandidate);
+            }
+            else
+            {
+                return RedirectToAction("ShowWinner");
+            }
         }
 
         public ActionResult ShowWinner()

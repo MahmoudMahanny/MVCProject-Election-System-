@@ -16,10 +16,10 @@ namespace ElectionProgram.Models
         public int candidate_id { get; set; }
         public virtual Candidate Candidate { get; set; }
 
-        [ForeignKey("Voter")]
+        [ForeignKey("ApplicationUser")]
         [Required]
-        public int Voter_id { get; set; }
-        public virtual Voter Voter { get; set; }
+        public string ApplicationUserID { get; set; }
+        public virtual ApplicationUser ApplicationUser { get; set; }
 
     }
 }
