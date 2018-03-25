@@ -2,10 +2,11 @@
 
 @{
     ViewBag.Title = "My page";
+
     Layout = "~/Views/Shared/_MyLayout.cshtml";
 }
-
-
+<script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
 @section header{
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
@@ -19,10 +20,17 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("show candidates","ShowCandidate", new { id = Model.ID })</li>
-                    <li>@Html.ActionLink("Vote", "Vote",new {  id = Model.ID })</li>
+                    <li>@Ajax.ActionLink("show candidates", "show", new AjaxOptions()
+                   {
+                       UpdateTargetId = "m",
+                       InsertionMode = InsertionMode.Replace,
+                       HttpMethod = "GET",
+                       LoadingElementId = "imgload"
+});
+                    </li>
+                    <li>@Html.ActionLink("Vote", "Vote", new { id = Model.ID })</li>
                     <li>@Html.ActionLink("Aplay As Candidate", "Aplay", new { id = Model.ID })
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    @*<li>@Html.ActionLink("Show result","ShowWier", new { id = Model.ID } )</li>*@
                 </ul>
                
                 <span ><img src="@Model.ImagePath " width=50 height=50 /></span>
@@ -31,14 +39,23 @@
             </div>
         </div>
     </div>
+
+   
 }
+
 
            
 
 
+<div id="imgload" style="display:none">
 
+    <img src="~/Content/images/giphy (1).gif" />
+</div>    
 
-
+<div id="m" style="width:100%;height:100%;background-color:antiquewhite;z-index: 1;margin:100px 30px;overflow:scroll">
+   
+  
+</div>
 
 
 
