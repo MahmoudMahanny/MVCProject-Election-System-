@@ -11,8 +11,13 @@ using ElectionProgram.Models;
 namespace ElectionProgram.Controllers
 {
     public class ElectionProgramsController : Controller
+<<<<<<< HEAD
+    { 
+        private DataContext db = new DataContext();
+=======
     {
         private ApplicationDbContext db = new ApplicationDbContext();
+>>>>>>> 73a3ae920ba22808a8fc5074d785fa93062bce4d
 
         // GET: ElectionPrograms
         public ActionResult Index()
@@ -36,26 +41,86 @@ namespace ElectionProgram.Controllers
         }
 
         // GET: ElectionPrograms/Create
-        public ActionResult Create()
+        [HttpGet]
+        public ActionResult Create(int CandidateId)
         {
-            return View();
+            var candidate = (from ca in db.Candidate
+                             where ca.ID == CandidateId
+                             select ca).FirstOrDefault();
+            //if(candidate.IsApplay==true)
+            //{
+            //    ElectionPrograms Electionprogram = (from e in db.ElectionProgram
+            //                                        where e.CID == candidate.ID
+            //                                        select e).FirstOrDefault();
+            //    return RedirectToAction("IsApplayProgram", new { ElProgID = Electionprogram.ID });
+            //}
+            ElectionPrograms el = new ElectionPrograms { CID = CandidateId,Can=candidate};
+            candidate.IsApplay = true;
+            db.SaveChanges();
+            return View(el);
         }
+
+
+        public ActionResult IsApplayProgram(int ElProgID)
+        {
+            ElectionPrograms Electionprogram = (from e in db.ElectionProgram
+                                                where e.ID==ElProgID
+                                                select e).FirstOrDefault();
+            ElectionPrograms Electionpr =Electionprogram;
+           
+            return View(Electionpr);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         // POST: ElectionPrograms/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Name,Slogan,Program,Symbol,ProgramStartDate,ProgramEndDate")] Models.ElectionPrograms electionProgram)
+        public ActionResult Create(/*[Bind(Include = "ID,Name,Slogan,Program,Symbol,ProgramStartDate,ProgramEndDate")] Models.*/ElectionPrograms electionProgram)
         {
             if (ModelState.IsValid)
             {
-                db.ElectionProgram.Add(electionProgram);
+                ElectionPrograms El = new ElectionPrograms
+                {
+                    ID = electionProgram.ID,
+                    Name = electionProgram.Name,
+                    Slogan = electionProgram.Slogan,
+                    Program = electionProgram.Program,
+                    
+                    ProgramEndDate = electionProgram.ProgramEndDate,
+                    ProgramStartDate = electionProgram.ProgramStartDate,
+                    CID = electionProgram.CID
+
+
+                };
+                var candidate = (from ca in db.Candidate
+                                 where ca.ID == electionProgram.CID
+                                 select ca).FirstOrDefault();
+                El.Symbol = candidate.ImagePath;
+                db.ElectionProgram.Add(El);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
             return View(electionProgram);
+            
+
+            
+
+           // return View(electionProgram);
         }
 
         // GET: ElectionPrograms/Edit/5
@@ -78,7 +143,7 @@ namespace ElectionProgram.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Name,Slogan,Program,Symbol,ProgramStartDate,ProgramEndDate")] Models.ElectionPrograms electionProgram)
+        public ActionResult Edit([Bind(Include = "CID,ID,Name,Slogan,Program,Symbol,ProgramStartDate,ProgramEndDate")] Models.ElectionPrograms electionProgram)
         {
             if (ModelState.IsValid)
             {

@@ -18,6 +18,42 @@ namespace ElectionProgram.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Voters
+        
+        public ActionResult show()
+        {
+            System.Threading.Thread.Sleep(1000);
+            var model = db.Candidate.ToList();
+            return View("_show",model);
+        }
+        #region ShowWier
+
+
+        //public ActionResult ShowWier(int id)
+        //{  int Maxvotes = 0;
+        //    string Name="";
+        //    string imgPath = "";
+
+        //    foreach (var can in db.Candidate.ToList())
+        //    {   if(Maxvotes==can.NoOfVotes)
+        //        {
+        //            return RedirectToAction("noresult",new {ID=id });
+        //        }
+        //        if(can.NoOfVotes>Maxvotes)
+        //        {
+        //            Maxvotes = can.NoOfVotes;
+        //            Name = can.Name;
+        //            imgPath = can.ImagePath;
+        //        }    
+        //    }
+        //    canidwinerresult wr = new canidwinerresult {voterID=id,imgPath=imgPath ,Name = Name, Winerresult = Maxvotes };
+
+        //    return View(wr);
+        //}
+        #endregion
+        public ActionResult noresult(int ID)
+        {
+            return View(ID);
+        }
         public ActionResult Index()
         {
             return View(db.Voter.ToList());
@@ -48,68 +84,101 @@ namespace ElectionProgram.Controllers
             Voter v = (from vo in db.Voter
                        where vo.ID == id
                        select vo).FirstOrDefault();
-            db.Voter.Remove(v);
-            Candidate c = new Candidate { Name = v.Name, NID = v.NID, BirthDate = v.BirthDate, ImagePath = v.ImagePath };
+           
+            Candidate c = new Candidate {ID=v.ID, Name = v.Name, NID = v.NID, BirthDate = v.BirthDate, ImagePath = v.ImagePath };
+            if(db.Candidate.ToList().Count==0)
+            {
+                db.Candidate.Add(c);
+                db.SaveChanges();
+                return RedirectToAction("Create", "ElectionPrograms", new { CandidateId = c.ID });
+
+            }
+            foreach (var item in db.Candidate.ToList())
+            {
+                if(item.ID==c.ID&& item.IsApplay==true)
+                {
+                    ElectionPrograms Electionprogram = (from e in db.ElectionProgram
+                                                        where e.CID == item.ID
+                                                        select e).FirstOrDefault();
+                    return RedirectToAction("IsApplayProgram", "ElectionPrograms", new { ElProgID = Electionprogram.ID });
+
+                    
+                }
+                if (item.ID == c.ID && item.IsApplay == false)
+                {
+                    return RedirectToAction("Create", "ElectionPrograms", new { CandidateId = c.ID });
+                }
+
+            }
             db.Candidate.Add(c);
             db.SaveChanges();
-            return RedirectToAction("Details", "Candidates", new { ID = c.ID });
+            return RedirectToAction( "Create", "ElectionPrograms", new { CandidateId = c.ID });
 
         }
-        public ActionResult IsVoteMessag(int id)
+        public ActionResult IsVoteMessag(string candidateimagepath, string voterimagPath , int id,string vname,string cname)
+        
         {
 
-            Voter v = (from vo in db.Voter
-                       where vo.ID == id
-                       select vo).FirstOrDefault();
-            return View(v);
+            //Voter v = (from vo in db.Voter
+            //           where vo.ID == id
+            //           select vo).FirstOrDefault();
+            VoterCandidate votercand = new VoterCandidate {voterID=id,
+                votername =vname,candidatename=cname,candidateimagepath=candidateimagepath,
+            voterimagPath=voterimagPath};
+            return View(votercand);
         }
        
         [HttpGet]
         public ActionResult Vote(string id)
         {
 
+<<<<<<< HEAD
             var v = (from vo in db.Users
                        where vo.Id == id
+=======
+            Voter v1 = (from vo in db.Voter
+                       where vo.ID == id
+>>>>>>> 836fe1cdc0cb73774001f29a3b4ead509b858b36
                        select vo).FirstOrDefault();
-            if (v.IsVote == true)
+            Candidate c1 = db.Candidate.Find(v1.CandidateID);
+            VoterCandidate vc1 =new VoterCandidate {voterID=v1.ID, votername=v1.Name,voterimagPath=v1.ImagePath,
+             candidatename=c1.Name,candidateimagepath=c1.ImagePath};
+            if (v1.IsVote == true)
             {
-                return RedirectToAction("IsVoteMessag", new { ID = id });
+                return RedirectToAction("IsVoteMessag", new {
+                    candidateimagepath=c1.ImagePath,
+                    voterimagPath =v1.ImagePath, id=v1.ID, vname = v1.Name,cname=c1.Name });
             }
-            else
-            {
 
-                CandidatesIDVoter ca = new CandidatesIDVoter { VoterID = id, canList = db.Candidate.ToList() };
+
+            CandidatesIDVoter ca = new CandidatesIDVoter { VoterID = id, canList = db.Candidate.ToList() };
 
 
 
                 return View(ca);
-            }
+            
         }
         [HttpPost]
-        public ActionResult change(int id,int VoterID)
+        public ActionResult change(int id, int VoterID)
         {
-            
-            Voter v = (from vo in db.Voter
-                       where vo.ID == VoterID
-                       select vo).FirstOrDefault();
-            if (v.IsVote == true)
-            {
-                return RedirectToAction("MYPage", new { id = VoterID });
-                
-            }
-            else
-            {
-                var ca = (from c in db.Candidate
-                          where c.ID == id
-                          select c).FirstOrDefault();
+
+            Voter v = db.Voter.Find(VoterID);
+            Candidate ca = db.Candidate.Find(id);
+           
+           
                 ca.NoOfVotes += 1;
                 v.IsVote = true;
+<<<<<<< HEAD
+                 v.CandidateID = ca.ID;
+                 CandidateVoter cv = new CandidateVoter { candidate_id = id, Voter_id = VoterID };
+=======
                 CandidateVoter cv = new CandidateVoter { candidate_id = ca.ID, Voter_id = v.ID };
+>>>>>>> 73a3ae920ba22808a8fc5074d785fa93062bce4d
                 db.CandidateVoter.Add(cv);
                 db.SaveChanges();
 
                 return RedirectToAction("MYPage", new { id = VoterID });
-            }
+            
         }
 
 

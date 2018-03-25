@@ -5,8 +5,19 @@
     Layout = "~/Views/Shared/_MyLayout.cshtml";
 }
 
+<<<<<<< HEAD
+
+@section header
+    {
+    <div>
+        @Html.DropDownList("voters",
+                    new SelectList(Model, "ID", "Name",
+                    "Select Voter")); 
+    </div>
+=======
 @section header{
     <div>voter page</div>
+>>>>>>> 73a3ae920ba22808a8fc5074d785fa93062bce4d
 }
 <h2>Index</h2>
 
@@ -69,8 +80,16 @@
             <img src="@item.ImagePath" width="150" height="150"/>
         </td>
         <td>
+<<<<<<< HEAD
+
+            @Html.ActionLink("Home", "Home", new { id=item.ID }) |
+
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+
+=======
             @Html.ActionLink("Home", "Home", new { id=item.ID }) |
             @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+>>>>>>> 73a3ae920ba22808a8fc5074d785fa93062bce4d
             @Html.ActionLink("Details", "Details", new { id=item.ID }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.ID })
         </td>
