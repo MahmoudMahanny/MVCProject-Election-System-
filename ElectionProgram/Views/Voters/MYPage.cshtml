@@ -1,16 +1,11 @@
 ﻿@model ElectionProgram.Models.ApplicationUser
 
 @{
-<<<<<<< HEAD
     ViewBag.Title = "@Model.UserName";
-=======
-    ViewBag.Title = "My page";
-
->>>>>>> 836fe1cdc0cb73774001f29a3b4ead509b858b36
     Layout = "~/Views/Shared/_MyLayout.cshtml";
 }
-<script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
-<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+
+
 @section header{
     <div>
         <div class="container">
@@ -25,29 +20,12 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-<<<<<<< HEAD
                     <li>@Html.ActionLink("show candidates","ShowCandidate", new { id= Model.Id })</li>
                     <li>@Html.ActionLink("Vote", "Vote",new {  id = Model.Id })</li>
                     <li>@Html.ActionLink("Aplay As Candidate", "Aplay", new { id = Model.Id })
-=======
-                    <li>@Ajax.ActionLink("show candidates", "show", new AjaxOptions()
-                   {
-                       UpdateTargetId = "m",
-                       InsertionMode = InsertionMode.Replace,
-                       HttpMethod = "GET",
-                       LoadingElementId = "imgload"
-});
-                    </li>
-                    <li>@Html.ActionLink("Vote", "Vote", new { id = Model.ID })</li>
-                    <li>@Html.ActionLink("Aplay As Candidate", "Aplay", new { id = Model.ID })
-<<<<<<< HEAD
-                    @*<li>@Html.ActionLink("Show result","ShowWier", new { id = Model.ID } )</li>*@
-=======
->>>>>>> 836fe1cdc0cb73774001f29a3b4ead509b858b36
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                     <li>@Html.ActionLink("Show Election Result", "ShowResult", "Voters")</li>
                     <li>@Html.ActionLink("Show Winner", "ShowWinner", "Voters")</li>
->>>>>>> 73a3ae920ba22808a8fc5074d785fa93062bce4d
                 </ul>
                
                 <span ><img src="@Model.ImagePath " width=50 height=50 /></span>
@@ -56,23 +34,14 @@
             </div>
         </div>
     </div>
-
-   
 }
-
 
            
 
 
-<div id="imgload" style="display:none">
 
-    <img src="~/Content/images/giphy (1).gif" />
-</div>    
 
-<div id="m" style="width:100%;height:100%;background-color:antiquewhite;z-index: 1;margin:100px 30px;overflow:scroll">
-   
-  
-</div>
+
 
 
 

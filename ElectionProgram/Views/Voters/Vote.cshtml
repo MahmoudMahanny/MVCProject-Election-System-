@@ -14,7 +14,7 @@
             foreach (var item in Model.canList)
             {
               <div style="background-color:#f2f2f2 ;margin-top:10px" >@item.Name </div>
-                
+                // @Html.RadioButton("id", @item.ID,new {@unchecked=true} ) <span>Vote</span>
                <input name="id"type="radio" value="@item.ID"/>
                   
                 @Html.Hidden("VoterID", Model.VoterID)

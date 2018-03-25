@@ -1,4 +1,4 @@
-﻿@model  ElectionProgram.ShowModel.VoterCandidate 
+﻿@model ElectionProgram.Models.Voter 
 @{
     ViewBag.Title = "IsVoteMessag";
     Layout = "~/Views/Shared/_MyLayout.cshtml";
@@ -7,18 +7,12 @@
    <h1>instraction</h1> 
     }
 <div id="mes" >
-    <div style="color:white;font-family:'Estrangelo Edessa'">
-        
-    <span>
-        <img src="@Model.voterimagPath" width=50 height=50 class="img-circle" />
-        </span>&nbsp;
-        @Model.votername <b>you  voted to</b><p> </p>
-        <div><img src="@Model.candidateimagepath" width=50 height=50 class="img-circle"/>
-        </div>
-    <di class="icon-bar" style="color:white"> @Model.candidatename </di>
-</div>
+    <p>you Voted before</p>
+    <span><img src="@Model.ImagePath " width=50 height=50 /></span>
+    <span class="icon-bar" style="color:white"> @Model.Name </span>
 </div>
 
 <div class="btn btn-success" style="margin:0.5px">
-    @Html.ActionLink("Goto MYPage", "MYPage", new { id = Model.voterID})
+    @Html.ActionLink("Goto MYPage", "MYPage", new { id = Model.ID })
 </div>
+

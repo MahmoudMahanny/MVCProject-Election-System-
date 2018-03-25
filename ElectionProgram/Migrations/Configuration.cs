@@ -10,10 +10,7 @@ namespace ElectionProgram.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
-<<<<<<< HEAD
-=======
             ContextKey = "ElectionProgram.Models.ApplicationDbContext";
->>>>>>> 73a3ae920ba22808a8fc5074d785fa93062bce4d
         }
 
         protected override void Seed(ElectionProgram.Models.ApplicationDbContext context)
