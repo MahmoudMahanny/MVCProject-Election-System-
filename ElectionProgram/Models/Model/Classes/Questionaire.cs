@@ -9,6 +9,7 @@ namespace ElectionProgram.Models
     public class Questionaire
     {
         public int ID { get; set; }
+
         public string Type { get; set; }
 
         public virtual Admin Admin { get; set; }

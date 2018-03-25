@@ -14,15 +14,21 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
+<a href="~/Views/Questionaires/Create.cshtml">~/Views/Questionaires/Create.cshtml</a>
 
     <div class="form-horizontal">
         <h4>Questionaire</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @*<div class="form-group">*@
-            @Html.LabelFor(model => model.Type)
+        @Html.LabelFor(model => model.Type)
+        <select class="form-control" id="QuestionaireType" name="QuestionaireType">
+            <option>Company</option>
+            <option>Candidate</option>
+        </select>
+
             @*<div class="col-md-10">*@
-                @Html.EditorFor(model => model.Type, new { htmlAttributes = new { @class = "form-control" } })
+                @*@Html.EditorFor(model => model.Type, new { htmlAttributes = new { @class = "form-control" } })*@
                 @Html.ValidationMessageFor(model => model.Type, "", new { @class = "text-danger" })
             @*</div>
          </div>*@

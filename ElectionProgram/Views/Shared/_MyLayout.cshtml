@@ -13,7 +13,11 @@
     
 </head>
 <body>
+<<<<<<< HEAD
     <div class="navbar navbar-inverse navbar-fixed-top " style="height:70px; background-color:darkblue">
+=======
+    <div class="navbar navbar-inverse navbar-fixed-top " style="height:140px; background-color:#58614e">
+>>>>>>> 73a3ae920ba22808a8fc5074d785fa93062bce4d
         <div class="container ">
             @*<div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -23,7 +27,16 @@
                 </button>
                 
             </div>*@
-            @RenderSection("header", true)
+
+            <div id="header">
+                <div class="clearfix">
+                    <div class="logo">
+                        <a href="index.html"><img src="~/Content/images/Hong_Kong_District_Council_Election_Logo.svg.png" alt="LOGO" height="120" width="120"></a>
+                    </div>
+                    @RenderSection("header", true)
+                </div>
+            </div>
+            
             
         </div>
     </div>
@@ -34,11 +47,17 @@
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
         </footer>
     </div>
+<<<<<<< HEAD
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/jqueryAjax")
     @RenderSection("scripts", required: false)
+=======
+    @RenderSection("scripts", required: false)
+
+
+>>>>>>> 73a3ae920ba22808a8fc5074d785fa93062bce4d
 </body>
 </html>

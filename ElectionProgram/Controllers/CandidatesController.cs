@@ -12,7 +12,7 @@ namespace ElectionProgram.Controllers
 {
     public class CandidatesController : Controller
     {
-        private DataContext db = new DataContext();
+        private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Candidates
         public ActionResult Index()
@@ -46,7 +46,7 @@ namespace ElectionProgram.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,NoOfVotes,Name,BirthDate,Gender,NID,Address,Phone,CareerPosition,PIC")] Candidate candidate)
+        public ActionResult Create([Bind(Include = "ID,NoOfVotes,Name,BirthDate,Gender,NID,Address,Phone,CareerPosition,ImagePath")] Candidate candidate)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace ElectionProgram.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,NoOfVotes,Name,BirthDate,Gender,NID,Address,Phone,CareerPosition,PIC")] Candidate candidate)
+        public ActionResult Edit([Bind(Include = "ID,NoOfVotes,Name,BirthDate,Gender,NID,Address,Phone,CareerPosition,ImagePath")] Candidate candidate)
         {
             if (ModelState.IsValid)
             {

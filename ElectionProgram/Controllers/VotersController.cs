@@ -14,7 +14,7 @@ namespace ElectionProgram.Controllers
 {
     public class VotersController : Controller
     {
-        private DataContext db = new DataContext();
+        private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Voters
         
@@ -65,6 +65,11 @@ namespace ElectionProgram.Controllers
                        select vo).FirstOrDefault();
             return View(v);
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet]
         public ActionResult ShowCandidate(int id)
         {
@@ -157,8 +162,12 @@ namespace ElectionProgram.Controllers
            
                 ca.NoOfVotes += 1;
                 v.IsVote = true;
+<<<<<<< HEAD
                  v.CandidateID = ca.ID;
                  CandidateVoter cv = new CandidateVoter { candidate_id = id, Voter_id = VoterID };
+=======
+                CandidateVoter cv = new CandidateVoter { candidate_id = ca.ID, Voter_id = v.ID };
+>>>>>>> 73a3ae920ba22808a8fc5074d785fa93062bce4d
                 db.CandidateVoter.Add(cv);
                 db.SaveChanges();
 
@@ -194,7 +203,7 @@ namespace ElectionProgram.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
 
-        public ActionResult Create([Bind(Include = "ID,Name,BirthDate,Gender,NID,Address,Phone,CareerPosition,PIC")] Voter voter, HttpPostedFileBase file)
+        public ActionResult Create([Bind(Include = "ID,Name,BirthDate,Gender,NID,Address,Phone,CareerPosition,ImagePath")] Voter voter, HttpPostedFileBase file)
         {
             if (ModelState.IsValid)
             {
@@ -203,15 +212,19 @@ namespace ElectionProgram.Controllers
                     string path = HttpContext.Server.MapPath("~/Content/images/");
                     file.SaveAs(path + file.FileName);
 
-                    voter.ImagePath ="/Content/images/"+ file.FileName;
+                    voter.ImagePath = "/Content/images/" + file.FileName;
                 }
-            }
-            db.Voter.Add(voter);
-            db.SaveChanges();
-            return RedirectToAction("MYPage", new { id = voter.ID });
-        }
-        
 
+                db.Voter.Add(voter);
+                db.SaveChanges();
+                return RedirectToAction("MYPage", new { id = voter.ID });
+            }
+            else
+            {
+                return View(voter);
+            }
+        }
+       
         // GET: Voters/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -232,11 +245,19 @@ namespace ElectionProgram.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Name,BirthDate,Gender,NID,Address,Phone,CareerPosition,PIC")] Voter voter)
+        public ActionResult Edit([Bind(Include = "ID,Name,BirthDate,Gender,NID,Address,Phone,CareerPosition,ImagePath")] Voter voter, HttpPostedFileBase file)
         {
             if (ModelState.IsValid)
             {
+                
                 db.Entry(voter).State = EntityState.Modified;
+                if (file != null)
+                {
+                    string path = HttpContext.Server.MapPath("~/Content/images/");
+                    file.SaveAs(path + file.FileName);
+
+                    voter.ImagePath = "/Content/images/" + file.FileName;
+                }
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -267,6 +288,36 @@ namespace ElectionProgram.Controllers
             db.Voter.Remove(voter);
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
+
+
+
+        public ActionResult ShowResult()
+        {
+            return View(db.Candidate.ToList());
+        }
+
+        public ActionResult ShowWinner()
+        {
+            var Top2Candidate = (from c in db.Candidate
+                                 select c).OrderByDescending(c => c.NoOfVotes).Take(2).ToList();
+
+            if (Top2Candidate[0].NoOfVotes == Top2Candidate[1].NoOfVotes)
+            {
+                return RedirectToAction("RepeatedElection");
+
+            }
+            //else if (Top2Candidate[0].NoOfVotes > Top2Candidate[1].NoOfVotes)
+           
+            //    return View(Top2Candidate[0]);
+            
+            return View(Top2Candidate[0]);
+        }
+        public ActionResult RepeatedElection()
+        {
+            var Top2Candidate = (from c in db.Candidate
+                                 select c).OrderByDescending(c => c.NoOfVotes).Take(2).ToList();
+            return View(Top2Candidate);
         }
 
         protected override void Dispose(bool disposing)

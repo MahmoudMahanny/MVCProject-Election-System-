@@ -1,0 +1,30 @@
+﻿@model ElectionProgram.ViewModel.SurveyAnswer
+
+@{
+    ViewBag.Title = "ShowSurveyResult";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+@section header{
+    <div></div>
+    }
+
+<h2>ShowSurveyResult</h2>
+
+<div>
+    <h4>Questionaire</h4>
+    <hr />
+    @for(int i=1;i <= @Model.Questions.Count;i++)
+    {
+        <span><label>question @i :</label> @Model.Questions[i-1].question</span> 
+        <span><label>averageof answers : </label> @Model.avgQuestionAnswer[i-1]</span><br />
+
+    }
+
+
+
+    <label>TOtal Evaluation is : @Model.Evaluation</label>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

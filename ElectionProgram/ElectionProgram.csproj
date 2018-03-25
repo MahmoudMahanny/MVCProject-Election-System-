@@ -97,8 +97,17 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+<<<<<<< HEAD
     <Reference Include="Microsoft.Owin, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Owin.2.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+=======
+    <Reference Include="Microsoft.Owin, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.4.0.0\lib\net451\Microsoft.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.4.0.0\lib\net451\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+>>>>>>> 73a3ae920ba22808a8fc5074d785fa93062bce4d
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Owin.Security, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -187,6 +196,7 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountsController.cs" />
     <Compile Include="Controllers\AdminsController.cs" />
@@ -196,21 +206,26 @@
     <Compile Include="Controllers\ElectionSymbolsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\QuestionairesController.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\VotersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Migrations\201803211113210_test.cs" />
     <Compile Include="Migrations\201803211113210_test.Designer.cs">
       <DependentUpon>201803211113210_test.cs</DependentUpon>
     </Compile>
+=======
+>>>>>>> 73a3ae920ba22808a8fc5074d785fa93062bce4d
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\ApplicationRoleModel.cs" />
+    <Compile Include="Models\IdentityModel.cs" />
     <Compile Include="Models\Model\Classes\Account.cs" />
     <Compile Include="Models\Model\Classes\Admin.cs" />
     <Compile Include="Models\Model\Classes\Answer.cs" />
     <Compile Include="Models\Model\Classes\Candidate.cs" />
     <Compile Include="Models\Model\Classes\CandidateVoter.cs" />
-    <Compile Include="Models\Model\DataContext.cs" />
     <Compile Include="Models\Model\Classes\Election.cs" />
     <Compile Include="Models\Model\Classes\ElectionPrograms.cs" />
     <Compile Include="Models\Model\Classes\ElectionSymbols.cs" />
@@ -219,18 +234,31 @@
     <Compile Include="Models\Model\Classes\Questionaire.cs" />
     <Compile Include="Models\Model\Classes\Voter.cs" />
     <Compile Include="Models\Model\Classes\Winner.cs" />
+    <Compile Include="Models\Registration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
     <Compile Include="ShowModel\CandidatesIDVoter.cs" />
     <Compile Include="ShowModel\canidwinerresult.cs" />
     <Compile Include="ShowModel\VoterCandidate.cs" />
     <Compile Include="Startup1.cs" />
+=======
+    <Compile Include="Startup1.cs" />
+    <Compile Include="ViewModel\CandidatesIDVoter.cs" />
+    <Compile Include="ViewModel\SurveyAnswer.cs" />
+>>>>>>> 73a3ae920ba22808a8fc5074d785fa93062bce4d
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\images\1.png" />
+<<<<<<< HEAD
     <Content Include="Content\images\disc.gif" />
     <Content Include="Content\images\giphy %281%29.gif" />
+=======
+    <Content Include="Content\images\8.jpg" />
+    <Content Include="Content\images\bg.jpg" />
+    <Content Include="Content\images\Hong_Kong_District_Council_Election_Logo.svg.png" />
+>>>>>>> 73a3ae920ba22808a8fc5074d785fa93062bce4d
     <Content Include="Content\LoginStyle.css" />
     <Content Include="Content\messagevoted.css" />
     <Content Include="Content\ShowcandidateStyle.css" />
@@ -320,12 +348,22 @@
     <Content Include="Views\Voters\Vote.cshtml" />
     <Content Include="Views\Voters\IsVoteMessag.cshtml" />
     <Content Include="Views\Questionaires\ShowQuestions.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\ElectionPrograms\IsApplayProgram.cshtml" />
     <Content Include="Views\Voters\_show.cshtml" />
     <Content Include="Views\Voters\noresult.cshtml" />
+=======
+    <Content Include="Views\Voters\ShowResult.cshtml" />
+    <Content Include="Views\Voters\ShowWinner.cshtml" />
+    <Content Include="Views\Questionaires\ShowSurveyResult.cshtml" />
+    <Content Include="Views\Voters\RepeatedElection.cshtml" />
+    <Content Include="Views\Account\Registeration.cshtml" />
+    <Content Include="Views\Account\LogIN.cshtml" />
+>>>>>>> 73a3ae920ba22808a8fc5074d785fa93062bce4d
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Registerition\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -336,9 +374,13 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <EmbeddedResource Include="Migrations\201803211113210_test.resx">
       <DependentUpon>201803211113210_test.cs</DependentUpon>
     </EmbeddedResource>
+=======
+    <WCFMetadata Include="Service References\" />
+>>>>>>> 73a3ae920ba22808a8fc5074d785fa93062bce4d
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

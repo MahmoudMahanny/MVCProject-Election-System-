@@ -1,0 +1,32 @@
+﻿@model ElectionProgram.Models.Candidate
+
+@{
+    ViewBag.Title = "ShowWinner";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+@section header
+     {
+<h2>Winner</h2>
+    }
+<br />
+<br />
+<br />
+<br />
+
+@Html.DisplayFor(modelItem => modelItem.Name)
+
+
+
+    
+    @*@foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NoOfVotes)
+            </td>
+        </tr>
+    }*@
+

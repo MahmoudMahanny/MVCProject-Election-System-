@@ -14,11 +14,15 @@ namespace ElectionProgram.Models
         public int ID { get; set; }
         [DefaultValue("0")]
         public int NoOfVotes { get; set; }
+<<<<<<< HEAD
         [DefaultValue("false")]
         
         public bool IsApplay { get; set; }
 
 
+=======
+      
+>>>>>>> 73a3ae920ba22808a8fc5074d785fa93062bce4d
         public virtual Account Account { get; set; }
        
         public virtual Election Election { get; set; }

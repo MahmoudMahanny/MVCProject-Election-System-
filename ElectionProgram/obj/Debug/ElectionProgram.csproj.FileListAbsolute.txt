@@ -63,6 +63,7 @@ D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\obj\Debug
 D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.dll
 D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.pdb
 D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.csprojResolveAssemblyReference.cache
+<<<<<<< HEAD
 D:\mvc Project gethub\MVCProject-Election-System-\MVCProject-Election-System-\ElectionProgram\bin\ApplicationInsights.config
 D:\mvc Project gethub\MVCProject-Election-System-\MVCProject-Election-System-\ElectionProgram\bin\roslyn\csc.exe
 D:\mvc Project gethub\MVCProject-Election-System-\MVCProject-Election-System-\ElectionProgram\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
@@ -202,3 +203,80 @@ E:\mvc proelection\20.3.18.next update\MVCProject-Election-System-\MVCProject-El
 E:\mvc proelection\20.3.18.next update\MVCProject-Election-System-\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.Migrations.test.resources
 E:\mvc proelection\20.3.18.next update\MVCProject-Election-System-\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.csproj.GenerateResource.Cache
 E:\mvc proelection\20.3.18.next update\MVCProject-Election-System-\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.csprojResolveAssemblyReference.cache
+=======
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\ApplicationInsights.config
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\roslyn\csc.exe
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\roslyn\System.Collections.Immutable.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\roslyn\System.Reflection.Metadata.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\roslyn\vbc.exe
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\roslyn\VBCSCompiler.exe
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\roslyn\VBCSCompiler.exe.config
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\ElectionProgram.dll.config
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\ElectionProgram.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\ElectionProgram.pdb
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Antlr3.Runtime.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\EntityFramework.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\EntityFramework.SqlServer.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.AI.Agent.Intercept.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.AI.DependencyCollector.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.AI.Web.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.AI.WindowsServer.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.ApplicationInsights.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.Web.Infrastructure.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Newtonsoft.Json.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\System.Web.Helpers.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\System.Web.Mvc.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\System.Web.Optimization.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\System.Web.Razor.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\System.Web.WebPages.Deployment.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\System.Web.WebPages.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\System.Web.WebPages.Razor.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\WebGrease.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\EntityFramework.xml
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\EntityFramework.SqlServer.xml
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.AI.DependencyCollector.xml
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.AI.Web.xml
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.AI.WindowsServer.xml
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.ApplicationInsights.xml
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\System.Web.Helpers.xml
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\System.Web.Mvc.xml
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\System.Web.Optimization.xml
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\System.Web.Razor.xml
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\System.Web.WebPages.xml
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\System.Web.WebPages.Deployment.xml
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\System.Web.WebPages.Razor.xml
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Antlr3.Runtime.pdb
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Newtonsoft.Json.xml
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.pdb
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.Migrations.answertype.resources
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.AspNet.Identity.Core.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.Owin.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.Owin.Security.Cookies.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.Owin.Security.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.Owin.Security.OAuth.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Owin.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.AspNet.Identity.Core.xml
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.Owin.xml
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.Owin.Security.xml
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.Owin.Security.Cookies.xml
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.Owin.Security.OAuth.xml
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.csprojResolveAssemblyReference.cache
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.Owin.Host.SystemWeb.xml
+>>>>>>> 73a3ae920ba22808a8fc5074d785fa93062bce4d

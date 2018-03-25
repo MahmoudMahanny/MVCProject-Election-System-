@@ -12,7 +12,7 @@ namespace ElectionProgram.Controllers
 {
     public class AccountsController : Controller
     {
-        private DataContext db = new DataContext();
+        private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Accounts
         public ActionResult Index()

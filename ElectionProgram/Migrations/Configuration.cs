@@ -5,14 +5,18 @@ namespace ElectionProgram.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<ElectionProgram.Models.DataContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<ElectionProgram.Models.ApplicationDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
+<<<<<<< HEAD
+=======
+            ContextKey = "ElectionProgram.Models.ApplicationDbContext";
+>>>>>>> 73a3ae920ba22808a8fc5074d785fa93062bce4d
         }
 
-        protected override void Seed(ElectionProgram.Models.DataContext context)
+        protected override void Seed(ElectionProgram.Models.ApplicationDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 

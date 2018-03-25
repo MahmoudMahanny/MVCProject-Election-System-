@@ -11,8 +11,13 @@ using ElectionProgram.Models;
 namespace ElectionProgram.Controllers
 {
     public class ElectionProgramsController : Controller
+<<<<<<< HEAD
     { 
         private DataContext db = new DataContext();
+=======
+    {
+        private ApplicationDbContext db = new ApplicationDbContext();
+>>>>>>> 73a3ae920ba22808a8fc5074d785fa93062bce4d
 
         // GET: ElectionPrograms
         public ActionResult Index()
