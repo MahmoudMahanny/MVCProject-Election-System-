@@ -1,10 +1,10 @@
-﻿@model ElectionProgram.Models.ApplicationUser
+﻿@model ElectionProgram.ViewModel.CandidatesVoter
 
 @{
     ViewBag.Title = "@Model.UserName";
     Layout = "~/Views/Shared/_MyLayout.cshtml";
 }
-
+<link href="~/Content/TemplateStyle.css" rel="stylesheet" />
 
 @section header{
     <div>
@@ -16,20 +16,82 @@
                     <span class="icon-bar"></span>
                 </button>
             </div>
-            @{
-                string s = Model.Id;}
+        
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav"style="font-size:20px;margin-top:20px">
-                    <li>@Html.ActionLink("show candidates","ShowCandidate", new { id= Model.Id })</li>
-                    <li>@Html.ActionLink("Vote", "Vote",new {  id = Model.Id })</li>
-                    <li>@Html.ActionLink("Aplay As Candidate", "Aplay", new { id = Model.Id })
-                    <li>@Html.ActionLink("Show Election Result", "ShowResult", "Voters", new { id = Model.Id })</li>
+                    <li>@Html.ActionLink("show candidates","ShowCandidate", new { id= Model.VoterID })</li>
+                    <li>@Html.ActionLink("Vote", "Vote",new {  id = Model.VoterID })</li>
+                    <li>@Html.ActionLink("Aplay As Candidate", "Aplay", new { id = Model.VoterID })</li>
+                    <li>@Html.ActionLink("Show Election Result", "ShowResult", "Voters", new { id = Model.VoterID })</li>
                 </ul>
                
-                <span ><img src="@Model.ImagePath " width=50 height=50 /></span>
-                <span class="icon-bar" style="color:white;font-size:20px;margin:50px"> @Model.UserName </span>
+                <span ><img src="@Model.AppUser.ImagePath " width=50 height=50 /></span>
+                <span class="icon-bar" style="color:white;font-size:20px;margin:50px"> @Model.AppUser.UserName </span>
                           
             </div>
         </div>
     </div>
 }
+
+<div class="featured">
+    <h2>Our Candidates</h2>
+    @foreach (var candidate in Model.canList)
+    {
+
+        <ul>
+            <li class="text-center">
+                <span class="frame1">
+                    <span class="box">
+                        <img src="@candidate.ImagePath" alt="Img" height="130" width="197">
+                    </span>
+                </span>
+                <p>
+                    <b>@candidate.Name</b>
+                </p>
+                <span class="btn btn-info" style="text-align:center;color:white">
+                    @Html.ActionLink("Read More", "Details", "Candidates", null, new { id = @candidate.ID })
+                </span>
+            </li>
+        </ul>
+
+    }
+</div>
+</div>
+<div style="clear:both"></div>
+
+<div id="footer">
+    <div class="clearfix">
+        <div class="section">
+            <h4>Latest News</h4>
+
+        </div>
+        <div class="section contact">
+            <h4>Contact Us</h4>
+            <p>
+                <span>Address:</span> the address city, state 1111
+            </p>
+            <p>
+                <span>Phone:</span> (+20) 000 222 999
+            </p>
+            <p>
+                <span>Email:</span> info@freewebsitetemplates.com
+            </p>
+        </div>
+        <div class="section">
+            <h4>SEND US A MESSAGE</h4>
+            <p>
+                If you're having problems editing this website template, then don't hesitate to ask for help on the Forums.
+            </p>
+            <a href="http://www.freewebsitetemplates.com/misc/contact/" class="subscribe">Click to send us an email</a>
+        </div>
+    </div>
+    <div id="footnote">
+        <div class="clearfix">
+            <div class="connect">
+                <a href="http://freewebsitetemplates.com/go/facebook/" class="facebook"></a><a href="http://freewebsitetemplates.com/go/twitter/" class="twitter"></a><a href="http://freewebsitetemplates.com/go/googleplus/" class="googleplus"></a><a href="http://pinterest.com/fwtemplates/" class="pinterest"></a>
+            </div>
+
+        </div>
+    </div>
+</div>
+

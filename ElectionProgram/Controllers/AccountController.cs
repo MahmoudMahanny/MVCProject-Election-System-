@@ -53,12 +53,13 @@ namespace ElectionProgram.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Registeration(RegistrationVM _User)
+        public async Task<ActionResult> Registeration(RegistrationVM _User, HttpPostedFileBase file)
         {
             if (ModelState.IsValid == false)
             {
                 return View(_User);
             }
+            
             ApplicationUser AppUser = new ApplicationUser()
             {
                 UserName = _User.UserName,
@@ -71,7 +72,14 @@ namespace ElectionProgram.Controllers
                 NID = _User.NID,
                 PhoneNumber = _User.Phone
             };
-            
+            if (file != null)
+            {
+                string path = HttpContext.Server.MapPath("~/Content/images/");
+                file.SaveAs(path + file.FileName);
+
+                _User.ImagePath = "/Content/images/" + file.FileName;
+            }
+            AppUser.ImagePath = _User.ImagePath;
             ApplicationUserStore store = new ApplicationUserStore(new ApplicationDbContext());
             ApplicationUserManager manager = new ApplicationUserManager(store);
 

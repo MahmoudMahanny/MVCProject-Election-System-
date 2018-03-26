@@ -54,7 +54,6 @@ D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\Antlr
 D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\Newtonsoft.Json.xml
 D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.dll
 D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.pdb
-D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.csprojResolveAssemblyReference.cache
 E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\ApplicationInsights.config
 E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\roslyn\csc.exe
 E:\ITI\subjects\MVC\new GetHUP Project\MVCProject-Election-System-\ElectionProgram\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
@@ -220,3 +219,4 @@ D:\ITI\MVC\Election System - Copy\25-3-2018\MVCProject-Election-System-\Election
 D:\ITI\MVC\Election System - Copy\25-3-2018\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.csprojResolveAssemblyReference.cache
 D:\ITI\MVC\Election System - Copy\25-3-2018\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.dll
 D:\ITI\MVC\Election System - Copy\25-3-2018\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.pdb
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.csprojResolveAssemblyReference.cache

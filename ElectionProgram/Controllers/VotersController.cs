@@ -30,7 +30,13 @@ namespace ElectionProgram.Controllers
         ApplicationUser User = (from vo in db.Users
                        where vo.Id == id
                        select vo).FirstOrDefault();
-            return View(User);
+            CandidatesVoter CandidateVoters = new CandidatesVoter()
+            {
+                AppUser=User,
+                VoterID = User.Id,
+                canList = db.Candidate.ToList()
+            };
+            return View(CandidateVoters);
         }
         /// <summary>
         /// 

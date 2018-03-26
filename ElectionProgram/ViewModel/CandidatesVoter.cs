@@ -10,7 +10,7 @@ namespace ElectionProgram.ViewModel
     {
         public string VoterID { get; set; }
         public int ElectionId { get; set; }
-
+        public ApplicationUser AppUser { get; set; }
         public List<Candidate> canList{ get; set; }
     }
 }
