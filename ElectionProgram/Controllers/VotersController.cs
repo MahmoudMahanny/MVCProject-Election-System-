@@ -7,7 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using ElectionProgram.Models;
-using ElectionProgram.ShowModel;
+using ElectionProgram.ViewModel;
 using ElectionProgram.ViewModel;
 using Microsoft.AspNet.Identity;
 
@@ -40,7 +40,7 @@ namespace ElectionProgram.Controllers
         [HttpGet]
         public ActionResult ShowCandidate(string id)
         {
-            CandidatesIDVoter ca = new CandidatesIDVoter { VoterID = id, canList = db.Candidate.ToList() };
+            CandidatesVoter ca = new CandidatesVoter { VoterID = id, canList = db.Candidate.ToList() };
             return View(ca);
         }
 
@@ -79,7 +79,7 @@ namespace ElectionProgram.Controllers
             }
             else
             {
-                CandidatesIDVoter ca = new CandidatesIDVoter { VoterID = id, canList = db.Candidate.ToList() };
+                CandidatesVoter ca = new CandidatesVoter { VoterID = id, canList = db.Candidate.ToList() };
                 return View(ca);
             }
 
@@ -226,31 +226,20 @@ namespace ElectionProgram.Controllers
         }
 
         [HttpGet]
-        public ActionResult ShowResult()
+        public ActionResult ShowResult(string ID)
         {
-            ElectionCadidates electionCandidate = new ElectionCadidates();
-
-            ApplicationUserStore store = new ApplicationUserStore(new ApplicationDbContext());
-            ApplicationUserManager manager = new ApplicationUserManager(store);
-
-
+            
             Election ele = (from e in db.Election
                             select e).FirstOrDefault();
-            //var asd = User.Identity.GetUserId();
-            electionCandidate.ElectionId = ele.ID;
-            electionCandidate.candidateList = db.Candidate.ToList();
-            electionCandidate.AppUserID = ApplicationUserID;
-            return View(electionCandidate);
-        }
-        [HttpPost]
-        public ActionResult ShowResult(ElectionCadidates electionCandidate)
-        {
+            var AppuserID = User.Identity.GetUserId();
+            CandidatesVoter electionCandidate = new CandidatesVoter()
+            {
+                ElectionId = ele.ID,
+                canList = db.Candidate.ToList(),
+                VoterID = ID
+            };
 
-            Election e = (from ele in db.Election
-                          where ele.ID == electionCandidate.ElectionId
-                          select ele).FirstOrDefault();
-
-            if (e.EndDate<System.DateTime.Now)
+            if (ele.EndDate < System.DateTime.Now)
             {
                 return View(electionCandidate);
             }
@@ -259,6 +248,23 @@ namespace ElectionProgram.Controllers
                 return RedirectToAction("ShowWinner");
             }
         }
+        //[HttpPost]
+        //public ActionResult ShowResult(ElectionCadidates electionCandidate)
+        //{
+
+        //    Election e = (from ele in db.Election
+        //                  where ele.ID == electionCandidate.ElectionId
+        //                  select ele).FirstOrDefault();
+
+        //    if (e.EndDate<System.DateTime.Now)
+        //    {
+        //        return View(electionCandidate);
+        //    }
+        //    else
+        //    {
+        //        return RedirectToAction("ShowWinner");
+        //    }
+        //}
 
         public ActionResult ShowWinner()
         {

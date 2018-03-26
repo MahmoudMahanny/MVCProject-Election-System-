@@ -12,8 +12,8 @@ namespace ElectionProgram.Controllers
         ApplicationDbContext context = new ApplicationDbContext();
         public ActionResult Index()
         {
-           
-            return View();
+             
+            return View(context.Candidate.ToList());
         }
 
         public ActionResult About()

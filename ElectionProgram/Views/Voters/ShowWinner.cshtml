@@ -1,4 +1,4 @@
-﻿@model ElectionProgram.Models.Candidate
+﻿@model ElectionProgram.Models.CandidateVoter
 
 @{
     ViewBag.Title = "ShowWinner";
@@ -29,4 +29,6 @@
             </td>
         </tr>
     }*@
-
+@*<div class="btn btn-info" style="text-align:center;color:white">
+    @Html.ActionLink("Goto MYPage", "MYPage", new { id = Model.VoterID })
+</div>*@

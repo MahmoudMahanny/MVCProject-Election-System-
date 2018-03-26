@@ -10,6 +10,7 @@ using ElectionProgram.Models;
 
 namespace ElectionProgram.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class AdminsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -123,5 +124,7 @@ namespace ElectionProgram.Controllers
             }
             base.Dispose(disposing);
         }
+        //////////////////////////////////////////////////////////////////////////
+
     }
 }

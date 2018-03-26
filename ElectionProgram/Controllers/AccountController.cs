@@ -82,7 +82,8 @@ namespace ElectionProgram.Controllers
                 IAuthenticationManager Authentication = HttpContext.GetOwinContext().Authentication;
                 ApplicationSignInManager signInManager = new ApplicationSignInManager(manager, Authentication);
                 await signInManager.SignInAsync(AppUser, false, false);
-                return RedirectToAction("MYPage", "Voters", new { id = AppUser.Id});
+                return RedirectToAction("LogIN", "Account", new { id = AppUser.Id });
+
             }
             return View(_User);
 
@@ -108,7 +109,15 @@ namespace ElectionProgram.Controllers
                         IAuthenticationManager Authentication = HttpContext.GetOwinContext().Authentication;
                         ApplicationSignInManager signInManager = new ApplicationSignInManager(manager, Authentication);
                         await signInManager.SignInAsync(AppUser, false, false);
-                        return RedirectToAction("MYPage", "Voters", new { id = AppUser.Id });
+                        if (User.IsInRole("Admin"))
+                        {
+                            
+                            return RedirectToAction("Edit", "Admins", new { id = AppUser.Id });
+                        }
+                        else
+                        {
+                            return RedirectToAction("MYPage", "Voters", new { id = AppUser.Id });
+                        }
                     }
                     return View(_User);
                 }
