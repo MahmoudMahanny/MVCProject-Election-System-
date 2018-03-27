@@ -220,3 +220,7 @@ D:\ITI\MVC\Election System - Copy\25-3-2018\MVCProject-Election-System-\Election
 D:\ITI\MVC\Election System - Copy\25-3-2018\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.dll
 D:\ITI\MVC\Election System - Copy\25-3-2018\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.pdb
 D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\obj\Debug\ElectionProgram.csprojResolveAssemblyReference.cache
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.AspNet.SignalR.Core.dll
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.AspNet.SignalR.Core.xml
+D:\ITI\MVC\Election System\MVCProject-Election-System-\ElectionProgram\bin\Microsoft.AspNet.SignalR.SystemWeb.xml

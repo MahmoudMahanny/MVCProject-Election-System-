@@ -10,10 +10,12 @@ using ElectionProgram.Models;
 using ElectionProgram.ViewModel;
 using ElectionProgram.ViewModel;
 using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.SignalR;
+using ElectionProgram.Hubs;
 
 namespace ElectionProgram.Controllers
 {
-    [Authorize]
+
     public class VotersController : Controller
     {
         string ApplicationUserID;
@@ -60,6 +62,8 @@ namespace ElectionProgram.Controllers
             Candidate c = new Candidate { Name = v.Name, NID = v.NID, BirthDate = v.BirthDate, ImagePath = v.ImagePath };
             db.Candidate.Add(c);
             db.SaveChanges();
+            var HubContext = GlobalHost.ConnectionManager.GetHubContext<AdminHub>();
+            HubContext.Clients.All.NewCandidate(c);
             return RedirectToAction("Details", "Candidates", new { ID = c.ID });
 
         }
